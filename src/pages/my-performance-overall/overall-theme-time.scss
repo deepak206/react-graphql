@@ -1,0 +1,64 @@
+@import "../../assets/styles/mixins";
+
+.overall-theme {
+  @include themify($themes) {
+    border-radius: 5px;
+    flex-grow: 1;
+    margin: 30px 55px 44px 30px;
+    &-stackchart {
+      flex-grow: 0;
+      max-width: 72%;
+      flex-basis: 72%;
+    }
+    &-timechart {
+      flex-grow: 0;
+      max-width: 28%;
+      flex-basis: 28%;
+    }
+    .timechart-paper {
+      width: 100%;
+      box-shadow: unset;
+    }
+    .stackchart-paper {
+      width: 100%;
+      box-shadow: unset;
+      &-heading {
+        display: flex;
+        padding: 20px 30px;
+        border-bottom: 1px solid themed('input_focus');
+        &__text {
+          @include DynamicFontConfig(normal, normal, normal, normal, normal);
+          flex-grow: 1;
+          font-size: 16px;
+          color: themed('sub_heading_color');
+        }
+        &-legend {
+          @include center();
+          @include DynamicFontConfig(normal, normal, normal, normal, normal);
+          font-size: 12px;
+          color: themed('sub_heading_color');
+          &__social {
+            width: 11px;
+            height: 11px;
+            background-color: themed('test-report-circle-orange');
+            display: inline-block;
+            border-radius: 30px;
+            margin-right: 7px; 
+          }
+          &__professional {
+            width: 11px;
+            height: 11px;
+            background-color: themed('test-report-circle-yellow');
+            display: inline-block;
+            border-radius: 30px;
+            margin: 0px 7px 0px 30px;
+          }
+        }
+      }
+      &-graph {
+        padding: 0px 30px 20px 30px;
+        height: 270px;
+      }
+    }
+  }
+}

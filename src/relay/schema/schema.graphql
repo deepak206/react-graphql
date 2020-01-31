@@ -1,0 +1,757 @@
+"""This directive allows results to be deferred during execution"""
+
+type Address {
+  addressString: String
+  city: String
+  country: String
+  town: String
+}
+
+type Admin implements INode & IEntityMetadata {
+  createdBy: String
+  createdOn: Date
+  deletedBy: String
+  deletedOn: Date
+  dob: Date
+  email: String
+  firstName: String
+  _id: ID
+  id: String
+  isDeleted: Boolean
+  lastName: String
+  mobileNumber: String
+  passwdValidation: String
+  primaryRole: Role
+  productModelIdentifier: String
+  uid: String
+  updatedBy: String
+  updatedOn: Date
+  userId: String
+  userName: String
+}
+
+"""A connection to a list of items."""
+type AdminConnection {
+  """a list of edges"""
+  edges: [AdminEdge]
+
+  """details about this specific page"""
+  pageInfo: PageInfo!
+  nodes: [Admin]
+  totalCount: Long!
+}
+
+"""An edge in a connection"""
+type AdminEdge {
+  """The item at the end of the edge"""
+  node: Admin
+
+  """cursor marks a unique position or index into the connection"""
+  cursor: String!
+}
+
+type Asset implements INode & IEntityMetadata {
+  authType: String!
+  contentType: String
+  createdBy: String
+  createdOn: Date
+  deletedBy: String
+  deletedOn: Date
+  _id: ID
+  id: String
+  isDeleted: Boolean
+  objectives: [AssetObjectives]
+  productModelIdentifier: String
+  questions: Int!
+  timeLimit: Int
+  updatedBy: String
+  updatedOn: Date
+  url: String!
+}
+
+type AssetObjectives {
+  skill: String!
+  statement: String
+}
+
+type City implements INode & IEntityMetadata {
+  createdBy: String
+  createdOn: Date
+  deletedBy: String
+  deletedOn: Date
+  _id: ID
+  id: String
+  isDeleted: Boolean
+  name: String
+  productModelIdentifier: String
+  shortCode: String
+  updatedBy: String
+  updatedOn: Date
+}
+
+"""A connection to a list of items."""
+type CityConnection {
+  """a list of edges"""
+  edges: [CityEdge]
+
+  """details about this specific page"""
+  pageInfo: PageInfo!
+  nodes: [City]
+  totalCount: Long!
+}
+
+"""An edge in a connection"""
+type CityEdge {
+  """The item at the end of the edge"""
+  node: City
+
+  """cursor marks a unique position or index into the connection"""
+  cursor: String!
+}
+
+enum CodeStatus {
+  EXPIRED
+  INVALID
+  VALID
+}
+
+type Country {
+  alternateNames: [String]
+  name: String
+  shortCode: String
+}
+
+"""A connection to a list of items."""
+type CountryConnection {
+  """a list of edges"""
+  edges: [CountryEdge]
+
+  """details about this specific page"""
+  pageInfo: PageInfo!
+  nodes: [Country]
+  totalCount: Long!
+}
+
+"""An edge in a connection"""
+type CountryEdge {
+  """The item at the end of the edge"""
+  node: Country
+
+  """cursor marks a unique position or index into the connection"""
+  cursor: String!
+}
+
+type Course implements INode & IEntityMetadata {
+  createdBy: String
+  createdOn: Date
+  deletedBy: String
+  deletedOn: Date
+  _id: ID
+  id: String
+  isDeleted: Boolean
+  level(id: String!): Level
+  levels(last: Int, before: String, after: String, first: Int): LevelConnection
+  name: String
+  productModelIdentifier: String
+  updatedBy: String
+  updatedOn: Date
+}
+
+input CreateInstituteInputInput {
+  name: String!
+  city: String!
+  town: String
+  addressString: String!
+  country: String!
+}
+
+input CreateLearnerInputInput {
+  instructorId: String
+  firstName: String!
+  sectionId: String
+  lastName: String!
+  accessType: LearnerAccessType!
+  productId: String!
+  email: String!
+  departmentId: String
+  licenseKey: String!
+  instituteId: String!
+  password: String!
+  courseId: String!
+}
+
+"""Built-in scalar representing an instant in time"""
+scalar Date
+
+enum Direction {
+  ASC
+  DESC
+}
+
+input EditLearnerInput {
+  firstName: String
+  _id: ID
+  id: String!
+  lastName: String
+  accessType: LearnerAccessType
+}
+
+type GrantedAuthority {
+  authority: String
+}
+
+type Group implements INode & IEntityMetadata {
+  createdBy: String
+  createdOn: Date
+  deletedBy: String
+  deletedOn: Date
+  groupId: String
+  _id: ID
+  id: String
+  isDeleted: Boolean
+  name: String
+  orgIdentifier: String
+  owner: String
+  productModelIdentifier: String
+  subGroups: [Group]
+  type: GroupType
+  updatedBy: String
+  updatedOn: Date
+  users: [String]
+}
+
+"""A connection to a list of items."""
+type GroupConnection {
+  """a list of edges"""
+  edges: [GroupEdge]
+
+  """details about this specific page"""
+  pageInfo: PageInfo!
+  nodes: [Group]
+  totalCount: Long!
+}
+
+"""An edge in a connection"""
+type GroupEdge {
+  """The item at the end of the edge"""
+  node: Group
+
+  """cursor marks a unique position or index into the connection"""
+  cursor: String!
+}
+
+enum GroupType {
+  DEPARTMENT
+  SECTION
+}
+
+interface IEntityMetadata {
+  createdBy: String
+  createdOn: Date
+  deletedBy: String
+  deletedOn: Date
+  isDeleted: Boolean
+  updatedBy: String
+  updatedOn: Date
+}
+
+interface INode {
+  _id: ID
+  id: String
+  productModelIdentifier: String
+}
+
+input InputForSeedUserInput {
+  status: String
+  email: String!
+  password: String!
+  pearsonCreatedBy: String
+  role: Role!
+  name: String!
+  countryCode: String
+}
+
+type Institute implements INode & IOrganization & IEntityMetadata {
+  activeTimestamp: String
+  address: Address
+  admins(last: Int, before: String, sort: SortInput = {field: "userId", order: ASC}, after: String = "0", first: Int = 10): AdminConnection
+  createdBy: String
+  createdOn: Date
+  deletedBy: String
+  deletedOn: Date
+  departments(last: Int, before: String, sort: SortInput = {field: "groupId", order: ASC}, after: String = "0", first: Int = 10): GroupConnection
+  _id: ID
+  id: String
+  instituteId: String
+  instructors(last: Int, before: String, sort: SortInput = {field: "userId", order: ASC}, after: String = "0", first: Int = 10): InstructorConnection
+  instructorsCount: Int
+  isDeleted: Boolean
+  learners(last: Int, before: String, sort: SortInput = {field: "userId", order: ASC}, after: String = "0", first: Int = 10): LearnerConnection
+  name: String
+  productModelIdentifier: String
+  sections(last: Int, before: String, departmentId: String, sort: SortInput = {field: "groupId", order: ASC}, after: String = "0", first: Int = 10): GroupConnection
+  subscribedLearnersCount: Int
+  trialLearnersCount: Int
+  updatedBy: String
+  updatedOn: Date
+}
+
+"""A connection to a list of items."""
+type InstituteConnection {
+  """a list of edges"""
+  edges: [InstituteEdge]
+
+  """details about this specific page"""
+  pageInfo: PageInfo!
+  nodes: [Institute]
+  totalCount: Long!
+}
+
+"""An edge in a connection"""
+type InstituteEdge {
+  """The item at the end of the edge"""
+  node: Institute
+
+  """cursor marks a unique position or index into the connection"""
+  cursor: String!
+}
+
+type Instructor implements INode & IEntityMetadata {
+  createdBy: String
+  createdOn: Date
+  deletedBy: String
+  deletedOn: Date
+  dob: Date
+  email: String
+  firstName: String
+  _id: ID
+  id: String
+  isDeleted: Boolean
+  lastName: String
+  mobileNumber: String
+  passwdValidation: String
+  primaryRole: Role
+  productModelIdentifier: String
+  updatedBy: String
+  updatedOn: Date
+  userId: String
+}
+
+"""A connection to a list of items."""
+type InstructorConnection {
+  """a list of edges"""
+  edges: [InstructorEdge]
+
+  """details about this specific page"""
+  pageInfo: PageInfo!
+  nodes: [Instructor]
+  totalCount: Long!
+}
+
+"""An edge in a connection"""
+type InstructorEdge {
+  """The item at the end of the edge"""
+  node: Instructor
+
+  """cursor marks a unique position or index into the connection"""
+  cursor: String!
+}
+
+input InviteAdminInputInput {
+  email: String!
+  status: String
+  name: String!
+  countryCode: String
+  pearsonCreatedBy: String
+  password: String!
+}
+
+interface IOrganization {
+  address: Address
+  name: String
+}
+
+type IUser {
+  dob: Date
+  email: String
+  firstName: String
+  lastName: String
+  mobileNumber: String
+  passwdValidation: String
+  primaryRole: Role
+  userId: String
+}
+
+type JwtUser {
+  accountNonExpired: Boolean!
+  accountNonLocked: Boolean!
+  authorities: [GrantedAuthority]
+  credentialsNonExpired: Boolean!
+  dob: Date
+  email: String
+  enabled: Boolean!
+  firstName: String
+  lastName: String
+  mobileNumber: String
+  passwdValidation: String
+  password: String
+  primaryRole: Role
+  roles: [Role]
+  userId: String
+  username: String
+}
+
+type Learner implements INode & IEntityMetadata {
+  course: UserCourseConnection
+  createdBy: String
+  createdOn: Date
+  deletedBy: String
+  deletedOn: Date
+  dob: Date
+  email: String
+  firstName: String
+  _id: ID
+  id: String
+  isDeleted: Boolean
+  lastName: String
+  locale: String
+  markDashboardWalkThroughComplete: Boolean
+  markTaskListWalkthroughComplete: Boolean
+  mobileNumber: String
+  passwdValidation: String
+  primaryRole: Role
+  productModelIdentifier: String
+  showDashboardWalkthrough: Boolean
+  showTaskListWalkthrough: Boolean
+  updatedBy: String
+  updatedOn: Date
+  userId: String
+}
+
+enum LearnerAccessType {
+  MASTER
+  SUBSCRIBED
+  TRIAL
+}
+
+"""A connection to a list of items."""
+type LearnerConnection {
+  """a list of edges"""
+  edges: [LearnerEdge]
+
+  """details about this specific page"""
+  pageInfo: PageInfo!
+  nodes: [Learner]
+  totalCount: Long!
+}
+
+"""An edge in a connection"""
+type LearnerEdge {
+  """The item at the end of the edge"""
+  node: Learner
+
+  """cursor marks a unique position or index into the connection"""
+  cursor: String!
+}
+
+type Level implements INode & IEntityMetadata {
+  createdBy: String
+  createdOn: Date
+  deletedBy: String
+  deletedOn: Date
+  description: String
+  _id: ID
+  id: String
+  isDeleted: Boolean
+  module(id: String!): Module
+  modules(last: Int, before: String, after: String, first: Int): ModuleConnection
+  name: String
+  oaeLevel: OAELevel
+  productModelIdentifier: String
+  updatedBy: String
+  updatedOn: Date
+}
+
+"""A connection to a list of items."""
+type LevelConnection {
+  """a list of edges"""
+  edges: [LevelEdge]
+
+  """details about this specific page"""
+  pageInfo: PageInfo!
+  nodes: [Level]
+  totalCount: Long!
+}
+
+"""An edge in a connection"""
+type LevelEdge {
+  """The item at the end of the edge"""
+  node: Level
+
+  """cursor marks a unique position or index into the connection"""
+  cursor: String!
+}
+
+"""Long type"""
+scalar Long
+
+type Module implements INode & IEntityMetadata {
+  coverImageUrl: String
+  createdBy: String
+  createdOn: Date
+  deletedBy: String
+  deletedOn: Date
+  description: String
+  _id: ID
+  id: String
+  isDeleted: Boolean
+  name: String
+  orderNumber: Int
+  productModelIdentifier: String
+  task(id: String!): Task
+  tasks(last: Int, before: String, after: String, first: Int): TaskConnection
+  thumbnailUrl: String
+  type: ModuleType
+  updatedBy: String
+  updatedOn: Date
+}
+
+"""A connection to a list of items."""
+type ModuleConnection {
+  """a list of edges"""
+  edges: [ModuleEdge]
+
+  """details about this specific page"""
+  pageInfo: PageInfo!
+  nodes: [Module]
+  totalCount: Long!
+}
+
+"""An edge in a connection"""
+type ModuleEdge {
+  """The item at the end of the edge"""
+  node: Module
+
+  """cursor marks a unique position or index into the connection"""
+  cursor: String!
+}
+
+enum ModuleType {
+  LEVEL_TEST
+  MODULE
+  QUIZ
+  REMEDIATION
+  REVIEW_TEST
+}
+
+"""Mutation root"""
+type Mutation {
+  """generate a reset passsword link"""
+  resetPassword(email: String!): Boolean!
+
+  """create new institute"""
+  createInstitute(createInstituteInput: CreateInstituteInputInput): Institute
+  editLearner(editLearnerInput: EditLearnerInput): Learner
+
+  """delete learner"""
+  deleteLearner(id: String!): Boolean!
+
+  """
+  actiavte a user once they have cliked on the activate account link in the email
+  """
+  activateUser(password: String, code: String, mobileNumber: String, name: String): Boolean!
+
+  """assigning products to institutes"""
+  assignProductToInstitute(productIds: [String]!, instituteId: String!): Boolean!
+
+  """update institute"""
+  updateInstitute(updateInstituteInput: UpdateInstituteInputInput, instituteId: String): Institute
+
+  """This query is for backend purpose only"""
+  seedUserInsertion(organizationId: String, inputForSeedUser: InputForSeedUserInput!): Boolean
+
+  """create an individual learner"""
+  createLearner(createLearnerInput: CreateLearnerInputInput!): Learner!
+
+  """invite institute admin"""
+  inviteAdminToOrganization(organizationId: String!, inviteAdminInput: InviteAdminInputInput!): Boolean
+
+  """change user password"""
+  changePassword(password: String!, email: String!): Boolean!
+}
+
+type OAELevel {
+  entityUrn: String
+  _id: ID
+  id: String
+  level: String
+  name: String
+  versionUrn: String
+}
+
+"""Information about pagination in a connection."""
+type PageInfo {
+  """When paginating forwards, are there more items?"""
+  hasNextPage: Boolean!
+
+  """When paginating backwards, are there more items?"""
+  hasPreviousPage: Boolean!
+
+  """When paginating backwards, the cursor to continue."""
+  startCursor: String
+
+  """When paginating forwards, the cursor to continue."""
+  endCursor: String
+}
+
+type Product implements INode & IEntityMetadata {
+  course: Course
+  createdBy: String
+  createdOn: Date
+  deletedBy: String
+  deletedOn: Date
+  _id: ID
+  id: String
+  isDeleted: Boolean
+  name: String
+  productModelIdentifier: String
+  updatedBy: String
+  updatedOn: Date
+}
+
+"""A connection to a list of items."""
+type ProductConnection {
+  """a list of edges"""
+  edges: [ProductEdge]
+
+  """details about this specific page"""
+  pageInfo: PageInfo!
+  nodes: [Product]
+  totalCount: Long!
+}
+
+"""An edge in a connection"""
+type ProductEdge {
+  """The item at the end of the edge"""
+  node: Product
+
+  """cursor marks a unique position or index into the connection"""
+  cursor: String!
+}
+
+"""Query root"""
+type Query {
+  """get an institute by instituteId"""
+  getInstitute(instituteId: String): Institute
+  launchAssetHTML(appVersion: String!, assetId: String!, deviceid: String!): String!
+  getScoreCard: ScoreCard
+  products(last: Int, before: String, after: String, first: Int): ProductConnection
+
+  """create user session"""
+  loginUsingSSOToken(pearsonExtSTGSSOSession: String): String
+  activatedUsers(organizationId: String!): Int!
+
+  """get loggedin user details"""
+  getLogedInUser(getAllRequired: Boolean!): JwtUser
+  product(productIdentifier: String): Product
+
+  """getting the cities"""
+  cities(last: Int, before: String, after: String = "0", first: Int = 10): CityConnection
+
+  """getting the cities"""
+  countries(last: Int, before: String, after: String = "0", first: Int = 10): CountryConnection
+
+  """Id in parameter is email Id of Learner"""
+  learner(id: String!): Learner!
+
+  """fetch institute list"""
+  institutes(last: Int, before: String, sort: SortInput = {field: "createdOn", order: DESC}, after: String = "0", first: Int = 10): InstituteConnection
+
+  """verify link code"""
+  verifyLink(code: String!): VerifyLinkResponse
+
+  """get user details"""
+  user(id: String!): IUser
+
+  """logout the user"""
+  logOut: String
+}
+
+enum Role {
+  INSTITUTE_ADMIN
+  INSTRUCTOR
+  LEARNER
+  PEARSON_ADMIN
+}
+
+type ScoreCard {
+  level1: String
+  level10: String
+  level2: String
+  level3: String
+  level4: String
+  level5: String
+  level6: String
+  level7: String
+  level8: String
+  level9: String
+}
+
+input SortInput {
+  field: String
+  order: Direction
+}
+
+type Task implements INode & IEntityMetadata {
+  asset: Asset
+  createdBy: String
+  createdOn: Date
+  deletedBy: String
+  deletedOn: Date
+  description: String
+  _id: ID
+  id: String
+  isDeleted: Boolean
+  name: String
+  productModelIdentifier: String
+  updatedBy: String
+  updatedOn: Date
+}
+
+"""A connection to a list of items."""
+type TaskConnection {
+  """a list of edges"""
+  edges: [TaskEdge]
+
+  """details about this specific page"""
+  pageInfo: PageInfo!
+  nodes: [Task]
+  totalCount: Long!
+}
+
+"""An edge in a connection"""
+type TaskEdge {
+  """The item at the end of the edge"""
+  node: Task
+
+  """cursor marks a unique position or index into the connection"""
+  cursor: String!
+}
+
+input UpdateInstituteInputInput {
+  addressString: String!
+  town: String
+  name: String!
+  city: String!
+  country: String!
+}
+
+type UserCourseConnection {
+  accessType: LearnerAccessType
+  course: Course
+}
+
+type VerifyLinkResponse {
+  status: CodeStatus
+  user: IUser
+}

@@ -1,0 +1,82 @@
+@import "../../assets/styles/mixins";
+
+.dashboard-slider {
+    @include themify($themes) {
+        width: 100%;
+        &__main{
+            @include center();
+            &_text{
+                padding: 25px 30px 35px 30px;
+            }
+            &_content{
+                width: 90%;
+                margin-right: 30px;
+                padding-top: 15px;
+                &_area{
+                    @include center();
+                }
+                .slider{
+                    width: 45px;
+                    height: 25px;
+                    background-color: themed('learner-dashboard-module-border-color');
+                }
+                &_left{
+                    @extend .slider;
+                    border-radius: 12.5px 0 0 12.5px;
+                }
+                &_right{
+                    @extend .slider;
+                    border-radius: 0 12.5px 12.5px 0;
+                }
+                &_tickmarks {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 40px;
+                    top: -24px;
+                    position: relative;
+                    pointer-events: none;
+                    &_p {
+                        position: relative;
+                        @include center();
+                        width: 4px;
+                        height: 0px;
+                        margin: 0 0 20px 0;
+                        color: themed('admin-dashboard-level-color');
+                        font-size: 12px;
+                        @include DynamicFontConfig(normal, normal, normal, normal, normal);
+                    }
+                    &_active{
+                        color: themed('white_color') !important;
+                        transition: 0.3s;
+                    }
+                    &_enabled{
+                        font-size: 12px;
+                        @include DynamicFontConfig(600, normal, normal, normal, normal);
+                        color: themed('admin-dashboard-enabled-level-color');
+                    }
+                }
+                &_go-to-level{
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    height: 30px;
+                    margin-top: -30px;
+                    color: themed('admin-dashboard-enabled-level-color');
+                    @include DynamicFontConfig(600, normal, normal, normal, normal);
+                    transition: 0.3s;
+                    opacity: 0;
+                    pointer-events: none;
+                    &_show {
+                        opacity: 1;
+                        pointer-events: auto;
+                    }
+                    &_img{
+                        margin-right: 35px;
+                        margin-left: 10px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

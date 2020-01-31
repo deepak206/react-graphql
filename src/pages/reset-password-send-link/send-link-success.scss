@@ -1,0 +1,93 @@
+@import "../../assets/styles/mixins";
+.send-link-success {
+    @include themify($themes) {
+        background-image: url(../../assets/images/background.png);
+        background-repeat: no-repeat;
+        background-position: 0px;
+        height: 100%;
+        z-index: 0;
+        position: relative;
+        width: 100%;
+        background-size: cover;
+        h4.form-heading {
+            padding-top: 0px;
+        }
+        .on-boarding-container__form {
+            align-items: center;
+            justify-content: center;
+        }
+        .on-boarding-container__overlay {
+            background: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 0;
+            top: 0px;
+            left: 0;
+            z-index: -1;
+        }
+        .on-boarding-container__form {
+            @include commonFlex(flex, themed('white_color'), center, center, center);
+            width: 370px;
+            margin: 0 auto;
+            padding: 28px 20px;
+            border-radius: 15px;
+            font-size: 14px;
+            margin: 150px auto;
+            position: relative;
+            box-shadow: 0 2px 10px 0 themed('reset_password_create_user_paper_1');
+        }
+        &__container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            width: 100%;
+            flex-direction: column;
+            text-align: center;
+            img.send-link-success__container_image {
+                width: 77px;
+            }
+            &_p {
+                padding: 5px 0px;
+            }
+            &_links {
+                    &_ul {
+                    display: flex;
+                    list-style-type: none;
+                    padding-left: 0px;
+                }
+                &_li {
+                    margin: 0 14px;
+                    font-weight: 600;
+                    color: themed('input_field__focus_border');
+                    &:last-child {
+                        position: relative;
+                        &:before {
+                            position: absolute;
+                            content: "";
+                            width: 5px;
+                            height: 5px;
+                            background: themed('success_or_error_ul_li_bc');
+                            top: 7px;
+                            left: -14px;
+                            border-radius: 50px;
+                        }
+                    }
+                }
+            }
+        }
+        .on-boarding-container__leaf-image img {
+            left: -60px !important;
+            z-index: -2 !important;
+        }
+        .leaf2 {
+            img {
+                z-index: -1;
+            }
+        }
+        img.icon-message {
+            @include imgiconmessage(110px, absolute, -90px, -80px);
+        }
+    }
+}

@@ -1,0 +1,148 @@
+@import "../../assets/styles/mixins";
+
+.add-institute {
+  @include themify($themes) {
+    &__breadcrumb {
+      width: 100%;
+      height: 97px;
+      padding: 40px 30px 0;
+      background-color: themed("white_color");
+      font-weight: normal;
+      &__title {
+        font-weight: normal;
+        font-size: 14px;
+        color: themed("institute_title");
+        margin-bottom: 5px;
+      }
+      &__sub-title {
+        font-size: 21px;
+        color: themed("black_color");
+      }
+    }
+    &__content {
+      max-width: 770px;
+      margin-top: 30px;
+      width: 80%;
+    }
+    &__papper {
+      box-shadow: 0 2px 10px 0 themed("institute-bg-shadow");
+      &__heading {
+        font-size: 21px;
+        font-weight: 400;
+        //padding-top: 35px;
+        color: themed("heading_color");
+        //padding-left: 40px;
+        padding: 40px;
+      }
+      &__sub-heading {
+        font-size: 16px;
+        @include DynamicFontConfig(normal, normal, normal, normal, normal);
+        color: themed("sub_heading_color");
+        margin-bottom: 40px;
+        padding-left: 40px;
+      }
+    }
+    &__course__heading{
+      font-size: 21px;
+      font-weight: 400;
+      color: #252525;
+    }
+    &__form-row {
+      flex-grow: 1;
+      padding: 0 41px 40px 41px;
+      &__input {
+        padding: 1px 15px 0 !important;
+      }
+    }
+    &__dynamic-form-row {
+      flex-grow: 1;
+      padding: 0 25px 0 25px;
+      &__input {
+        padding: 1px 15px 0 !important;
+      }
+    }
+    &__add-section {
+      @include DynamicFontConfig(600, normal, normal, normal, normal);
+      padding: 0 0 0 15px;
+      cursor: pointer;
+      font-size: 14px;
+      color: themed("institute-link-button");
+      margin-bottom: 23px;
+    }
+
+    &__department-title {
+      padding: 0 0 20px 40px;
+      font-size: 16px;
+      font-weight: 600;
+      color: themed("black_color");
+    }
+
+    &__form-section {
+      @include center();
+      width: 100%;
+      background: themed("form-section_background_color");
+      padding: 10px 0;
+      .btn-primary {
+        margin: 20px 0 40px 40px;
+      }
+    }
+    &__btns {
+      float: right;
+      width: 80%;
+      text-align: right;
+      margin-top: 30px;
+      padding-bottom: 80px;
+      .btn-back {
+        margin-right: 20px;
+      }
+    }
+    &__horizontal-divider {
+      border: 1px;
+      box-shadow: none;
+      background: none;
+      border-top: themed("horizontal_divider") 1px solid;
+      padding-bottom: 28px;
+      margin-top: 32px;
+    }
+    &__select-course{
+      margin-top: 40px;
+      padding: 40px;
+    }
+    &__select-course_section{
+      border: solid 2px #F1F4F6;
+      border-radius: 6px;
+      height: 60px;
+      padding: 18px;
+      margin-top:30px;
+    }
+    &__breadcrumb-section {
+      &__title {
+          @include DynamicFontConfig(normal, normal, normal, normal, normal);
+          margin:0;
+          font-size: 21px;
+          display: flex;
+          align-items: center;        
+        }
+        &__side-arrow {
+          width: 35px;
+          margin-right: 15px;
+          height: 22px;
+          object-fit: contain;
+          cursor: pointer;
+        }
+        width: 100%;
+        background: themed("white_color");
+        padding: 36px 30px 25px;
+    }
+  }
+}
+.add-inst-loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  width: 240px;
+  align-self: center;
+  margin: auto;
+}

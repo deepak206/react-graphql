@@ -1,0 +1,65 @@
+[
+  {
+    "modules": {
+      "0": "All modules",
+      "1": "Module 1",
+      "2": "Module 2",
+      "3": "Module 3"
+    },
+    "status": ["in-progress", "pending", "pending", "completed"],
+    "graph": [
+      [50, 30, 20, 40, 70, 50],
+      [5, 0, 0, 5, 0, 0 ],
+      [10, 30, 70, 50, 60, 25],
+      [50, 30, 20, 40, 70, 50]
+    ],
+    "themegraph": {
+      "social": [70,50,20,30,50,10],
+      "professional": [50,60,50,30,20,30]
+    },
+    "moduleResult": {
+      "completed": 5,
+      "total": 10
+    },
+    "taskResult": {
+      "completed": 20,
+      "total": 80
+    },
+    "timespent": {
+      "hour": 5,
+      "minute": 25 
+    },
+    "timeGraph": [ 60, 20, 40, 30, 20, 10 ]
+  },{
+    "modules": {
+      "0": "All modules",
+      "1": "Module 1",
+      "2": "Module 2",
+      "3": "Module 3"
+    },
+    "status": ["in-progress", "pending", "pending", "completed"],
+    "graph": [
+      [10, 30, 70, 50, 60, 25],
+      [50, 30, 20, 40, 70, 50],
+      [50, 30, 20, 40, 70, 50],
+      [5, 0, 0, 5, 0, 0 ]
+    ],
+    "themegraph": {
+      "social": [50,60,50,30,20,30],
+      "professional": [70,50,20,30,50,10]
+    },
+    "moduleResult": {
+      "completed": 2,
+      "total": 10
+    },
+    "taskResult": {
+      "completed": 8,
+      "total": 80
+    },
+    "timespent": {
+      "hour": 0,
+      "minute": 25 
+    },
+    "timeGraph": [ 20, 10, 60, 20, 40, 30 ]
+  }
+]

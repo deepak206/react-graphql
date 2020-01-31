@@ -1,0 +1,23 @@
+@import "../../assets/styles/mixins";
+
+.error-container{
+    &__text{
+    @include themify($themes) {
+      color:themed('error_color');
+      padding-bottom: 7px;
+      font-size: 12px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      position: relative;
+      padding-top: 1px;
+      &_image {
+        height: 11px;
+        padding-top: 1px;
+        margin-right: 3px;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../assets/styles/mixins.scss";
+
+.learner-management {
+    @include themify($themes) {
+        width: 100%;
+        display: flex;
+        &__container {
+            width: 100%;
+            background: themed('form-section_background_color');
+            padding-left: 32px;
+            padding-right: 50px;
+            padding-bottom: 50px;
+            .header-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                //margin-top: 40px;
+                margin-bottom: 20px;
+                &__sub-header-right {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    input {
+                        font-size: 12px;
+                    }
+                    .searchInput{
+                        box-shadow: none;
+                        align-items: center;
+                        display: flex;
+                        height: 40px;
+                        overflow: hidden;
+                        padding: 2px 0;
+                        width: 290px;
+                        margin-right: 30px;
+                    }
+                }
+                &__title {
+                    font-size: 21px;@include DynamicFontConfig(normal, normal, normal, normal, normal);
+                    margin-bottom: 5px;
+                    color: themed('h3_color');
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}

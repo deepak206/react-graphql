@@ -1,0 +1,10 @@
+{
+  "oae":{
+    "logo":"logo1.png",
+    "isValid":"false"
+  },
+  "stark":{
+    "logo":"pearson.png",
+    "isValid":"true"
+  }
+}

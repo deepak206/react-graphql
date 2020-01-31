@@ -1,0 +1,6 @@
+@import "../../assets/styles/mixins";
+
+.form-area {
+    @include themify($themes) {
+    }
+  }

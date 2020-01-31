@@ -1,0 +1,50 @@
+@import "../../assets/styles/mixins.scss";
+
+$color_1: 'white_color';
+$color_2: 'heading_color';
+
+.task-storyboards-popup-dailogbox {
+    @include themify($themes) {
+        position: absolute !important;
+        //overflow-y: unset !important;
+        &__container {
+            width: 770px;
+            height: 780px;
+            border-radius: 10px;
+            background-color: themed($color_1);
+            padding: 40px 50px 30px 54px;
+            &_popup-section {
+                max-width: 666px;
+                margin: 0 auto;
+                padding: 0px !important;
+                p{
+                    margin-bottom: 25px;
+                    font-size: 16px !important;
+                    padding: 0 50px !important;
+                    text-align: center;
+                    @include DynamicFontConfig(normal, normal, normal, normal, normal);
+                    color: themed($color_2);
+                }
+            }
+            &_popup-button {
+                margin-top: 30px;
+                @include center();
+            }
+            &_image {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+        
+        h6.dialog-title {
+            font-size: 21px;
+            text-align: center;
+            @include DynamicFontConfig(normal, normal, normal, normal, normal);
+            color: themed($color_2);
+        }
+    }
+}
+body.theme-oae.task-storyboards-popup-dailogbox_add-scroll {
+    overflow: auto !important;
+}

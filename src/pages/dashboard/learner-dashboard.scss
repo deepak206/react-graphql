@@ -1,0 +1,294 @@
+@import "../../assets/styles/mixins";
+
+.learner-dashboard {
+    height: 83%;
+    @include themify($themes) {
+        &__content {
+            margin: 30px;
+            &.loader_content{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }            
+            &_loader{
+                width: 240px;
+            }
+            &_header {
+                background: themed('white_color');
+                border-radius: 5px;
+                margin-right: 35px;
+                display: flex;
+                &_title {
+                    color: themed('learner-dashboard-activation-color');
+                    padding-left: 25px;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    width: 65%;
+                    &_p4{
+                        font-size: 16px;
+                        @include DynamicFontConfig(normal, normal, normal, normal, normal);
+                    }
+                    &_p2{
+                        font-size: 21px;
+                        @include DynamicFontConfig(600, normal, normal, normal, normal);
+                        margin-bottom: -10px;
+                    }
+                }
+                &_icon {
+                    width: 35%;
+                    justify-content: flex-end;
+                    display: flex;
+                    &_img{
+                    width: 280px;
+                    height: 115px;
+                    object-fit: contain;
+                    }
+                }
+            }
+            &_level-slider{
+                background: themed('white_color');
+                margin-right: 35px;
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                height: 90px;
+                border-radius: 5px;
+                position: relative;
+                &_zindex{
+                    z-index: 9;
+                }
+            }
+            &_section{
+                background: themed('white_color');
+                margin-right: 35px;
+                margin-top: 30px;
+                border-radius: 5px;
+                position: relative;
+                &.loader_section{
+                    min-height: 410px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                &_zindex{
+                    z-index: 9;
+                }
+                &_header{
+                    display: flex;
+                    align-items: center;
+                    padding: 30px;
+                    &_left{
+                        display: flex;
+                        align-items: center;
+                        width: 90%;
+                        &_p{
+                            font-size: 16px;
+                            @include DynamicFontConfig(normal, normal, normal, normal, normal);
+                            color: themed('learner-dashboard-activation-color');
+                            padding: 20px;
+                        }
+                        &_img{
+                            width: 70px;
+                            height: 70px;
+                            background-position: center;
+                            background-size: cover;
+                            border-radius: 50%;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                    &_mod-num{
+                        height: 65px;
+                        font-size: 48px;
+                        @include DynamicFontConfig(600, normal, normal, normal, normal);
+                        color: themed('learner-dashboard-module-border-color');
+                        width: 10%;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                    }
+                }
+                &_skills{
+                    padding: 0 0 57px 30px;
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    &.skill-loader{
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+        .modules-review-test {
+            background: themed('white_color');
+            border-radius: 5px;
+            width: 30.5%;
+            margin: 15px 30px 15px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px;
+            color: themed('quiz_p');
+            min-height: 90px;
+            border: solid 1px themed('learner-dashboard-module-border-color');
+            //transition: ease 0.5s;
+            @media (min-width:1024px) and (max-width:1199px) {
+                width: 45%;
+                margin: 15px 30px 15px 0px;
+            }
+            @media (min-width:1200px) and (max-width:1300px) {
+                width: 30%;
+                margin: 15px 20px 5px 0px;
+            }
+            @media (min-width:1301px) and (max-width:1450px) {
+                width: 30%;
+            }
+            
+            &:hover{
+                //transform: scale(1.08);
+            }
+            &__container {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                &_review-icon {
+                    margin: 30px;
+                    &_image {
+                        height: 40px;
+                        width: 40px;
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                    }
+                    width: 40px;
+                    @media (min-width:1301px) and (max-width:1450px) {
+                        margin: 25px 20px;
+                    }
+                    @media (min-width:1024px) and (max-width:1199px) {
+                        margin: 25px;
+                    }
+                    @media (min-width:1200px) and (max-width:1300px) {
+                        margin: 15px 15px;
+                    }
+                }
+                &_review-text {
+                    text-transform: capitalize;
+                    &_h4 {
+                        font-size: 16px;
+                        @include DynamicFontConfig(600, normal, normal, normal, normal);
+                        margin-bottom: 2px;
+                    }
+                    &_p {
+                        margin: 0px;
+                    }
+                }
+                &_review-list_icon{
+                        margin-right: 10px;
+                        @extend .modules-review-test__container_review-icon_image;
+                        width: 15px;
+                        height: 15px;
+                        @media (min-width:1024px) and (max-width:1199px) {
+                            margin-right: 15px;
+                    }
+                }
+                &.disable-link{
+                    cursor: default;
+                }
+            }
+        }
+        ul.modules-review-test__container_review-list {
+            display: flex;
+            align-items: center;
+            margin-left: 0px;
+            padding: 0px;
+            font-size: 12px;
+            @include DynamicFontConfig(normal, normal, normal, normal, normal);
+            li {
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+                color: themed("learner_module_tile_section_li");
+                // img {
+                //     width: 15px;
+                //     margin-right: 10px;
+                //     @media (min-width:1024px) and (max-width:1199px) {
+                //         margin-right: 15px;
+                //     }
+                // }
+                @media (min-width:1024px) and (max-width:1199px) {
+                    margin-right: 20px;
+                }
+                @media (min-width:1200px) and (max-width:1300px) {
+                    margin-right: 10px;
+                }
+            }
+        }
+        &__popover {
+            &_overlay {
+              background: rgba(0,0,0,0.6);
+              width: 100%;
+              height: 100%;
+              position: fixed;
+              z-index: 9;
+              left: 0;
+              top: 0;
+            }
+            .btn-orange {
+                margin-left: 30px;
+                span{
+                    @include DynamicFontConfig(600, normal, normal, normal, normal);
+                }     
+            }
+            p {
+            font-size: 16px !important;
+            color: themed('learner_module_overlay_p');
+            padding: 10px 30px 5px;
+            }
+            &.arrow_box {
+                position: absolute;
+                background: themed('white_color');               
+                width: 770px;
+                min-height: 170px;
+                top: 96px;
+                left: 160px;
+                right: 0;
+                margin: 0 auto;
+                border-radius: 5px;
+                z-index: 10;
+                padding-bottom: 35px;
+                &_header{
+                    font-size: 21px !important;
+                }
+                &::after {
+                    left: 375px;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    border: solid 16px transparent;
+                    position: absolute;
+                    pointer-events: none;
+                    border-bottom-color: themed('white_color');;
+                    transform: rotate(180deg);
+                    top: 100%;
+                }
+            }
+            &.arrow_box_slider {
+                @extend .arrow_box;
+                width: 360px;
+                top: 340px;
+                left: 160px;
+                padding-bottom: 30px;
+                &::after {
+                    left: 165px;
+                    transform: rotate(0deg);
+                    top: -17%;
+                }
+            }
+        }
+    }
+}

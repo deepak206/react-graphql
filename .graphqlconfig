@@ -1,0 +1,24 @@
+{
+  "name": "OAE GraphQL Schema",
+  "schemaPath": "src/relay/schema/schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "Non-Prod-Dev": {
+        "url": "https://oaep-api.nonprodoaep.net/dev1/backend/graphql",
+        "headers": {
+          "user-agent": "JS GraphQL",
+          "x-api-key": "fyaY4KktrH6qliV41adao5DGBQZO41OKF6K4dMa4"
+        },
+        "introspect": true
+      },
+      "Non-Prod-STG": {
+        "url": "https://oaep-stg.oaep.pearsondev.tech/backend/graphql",
+        "headers": {
+          "user-agent": "JS GraphQL",
+          "x-api-key": "frvL3rShVC8tKJZJf05yQ6qDI8wWINkF1l2n6Nv2"
+        },
+        "introspect": true
+      }
+    }
+  }
+}

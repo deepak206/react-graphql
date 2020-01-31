@@ -1,0 +1,74 @@
+@import "../../assets/styles/mixins";
+
+.skills-header {
+    @include themify($themes) {
+        width: 100%;
+        height: 140px;
+        background-color: themed('level-drawer');
+        display: flex;
+        align-items: center;
+        border-top-right-radius: 30px;
+        position: absolute;
+        z-index: 1;
+        &__list {
+            list-style-type: none;
+            display: flex;
+            min-width: 60%;
+            justify-content: space-between;
+            padding-left: 36px;
+            &_item {
+                //padding-top: 10px;
+                display: flex;
+                flex-direction: column;
+                cursor: pointer;
+                width: 10%;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                margin-top: 10px;
+                &_title {
+                    font-size: 12px;
+                    @include DynamicFontConfig(normal, normal, normal, normal, normal);
+                    text-align: center;
+                    color: themed('white_color');
+                    padding-top: 10px;
+                }
+                &_title_active {
+                    font-size: 12px;
+                    @include DynamicFontConfig(normal, normal, normal, normal, normal);
+                    text-align: center;
+                    color: themed('white_color');
+                    position: absolute;
+                    bottom: -8px;
+                }
+                &_active {                    
+                    width: 60px;
+                    height: 60px;
+                    border: solid 2px themed('white_color');
+                    border-radius: 50px;
+                    padding: 3px;                 
+                }
+                &_disable {                    
+                    width: 50px;
+                    height: 50px;
+                }
+                &_active-arrow {
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 15px 15px 15px;
+                    border-color: transparent transparent themed('input_focus') transparent;
+                    position: relative;
+                    bottom: -33px;
+                    left: 0px;
+                    right: 0;
+                    margin: 0 auto;
+                }
+            }
+            &_item-active {
+                position: relative;
+                margin-top: 5px;
+            }
+        }
+    }
+}

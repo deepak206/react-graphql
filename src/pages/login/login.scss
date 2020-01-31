@@ -1,0 +1,85 @@
+@import "../../assets/styles/mixins";
+
+.login-container {
+    @include themify($themes) {
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: 0;
+        position: relative;
+        width: 100%;
+        height: 90%;
+        overflow-x: hidden ;
+        @media(min-width:1650px){
+            height:93%
+        }
+
+        .container {
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__form {
+            width: 100%;
+        }
+
+        &__heading {
+            text-align: center;
+            font-weight: 400;
+            font-size: 20px;
+            margin-top: 5%;
+            margin-bottom: 0;
+            padding-top: 60px;
+            color: themed('black_color');
+
+            @media (min-width:1500px) {
+                margin-top: 10%;
+            }
+
+            @media (min-width:1023px) and (max-width:1365px) {
+                margin-top: 80px;
+            }
+        }
+
+        &-forgotpwd {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            display: none;
+
+            &__link {
+                color: themed('link_color');
+                text-align: center;
+                font-weight: 700;
+                text-decoration: none;
+
+            }
+
+        }
+
+        &__action {
+            .btn-outlined {
+                margin-top: 25px !important;
+            }
+        }
+
+        &__signup {
+            &-action {
+                text-align: center;
+                margin-top: 14px;
+                font-size: 17px;
+                padding-bottom: 90px;
+                display: none;
+
+                span {
+                    font-weight: 600;
+                    color: themed('link_color');
+
+                }
+            }
+        }
+
+        &__error {
+            text-align: center;
+        }
+    }
+}

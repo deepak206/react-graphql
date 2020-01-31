@@ -1,0 +1,188 @@
+@import "../../assets/styles/mixins";
+$color_1: 'learner_module_tile_section_module_info';
+$color_2: 'shadow_color';
+$color_3: 'quiz_number';
+$color_4: 'white_color';
+$color_5: 'learner_module_head_background';
+$color_6: 'learner_module_tile_section_background';
+$color_7: 'learner_module_tile_section_p';
+$color_8: 'learner_module_tile_section_li';
+
+.task-storyboards-container {
+    @include themify($themes) {
+        background: themed($color_5);
+        &__tile-section {
+            @include commonFlex(flex, themed($color_6), flex-start, column, flex-start);
+            padding: 30px 130px;
+            border-top-right-radius: 30px;
+            height: 100%;
+            min-height: 700px;
+            &_modules {
+                font-size: 21px;
+                color: themed($color_1);
+                &_p {
+                    font-size: 16px !important;          
+                    max-width: 71%;
+                    margin-top: 6px;
+                }
+            }
+            p.text-blue {
+                color: themed($color_7);
+                @include DynamicFontConfig(600, normal, normal, normal, normal);
+                font-size: 16px !important;
+                cursor: pointer;
+            }
+
+            .modules-review-test {
+                box-shadow: 0 2px 10px 0 themed($color_2);
+                background: themed('white_color');
+                border-radius: 8px;
+                width: 98%;
+                margin: 15px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0px;
+                color: themed('quiz_p');
+                min-height: 120px;
+                transition: ease 0.5s;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(1.03);
+                }
+                &.active {
+                    z-index: 9999;
+                    position: relative;
+                    box-shadow: none;
+                    cursor: default;
+                    pointer-events: none;
+                    &:hover{
+                        transform: none;
+                    }
+                }
+                &__container {
+                    display: flex;
+                    align-items: center;
+                    &_review-icon {
+                        margin: 30px;
+                        width: 60px;
+                        &_image {
+                            height: 60px;
+                            width: 60px;
+                            background-position: center;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                    &_review-text {
+                        &_h4 {
+                            font-size: 16px;
+                            @include DynamicFontConfig(600, normal, normal, normal, normal);
+                            margin-bottom: 2px;
+                            text-transform: capitalize;
+                        }
+                        &_p {
+                            margin: 0px;
+                        }
+                    }
+                    &_arrow-icon {
+                        margin-right: 40px;
+                        &_image {
+                            display: list-item;
+                        }
+                        cursor: pointer;
+                        &.active{
+                            cursor: default;
+                            pointer-events: none;
+                        }
+                    }
+                    &_review-list_icon{
+                        margin-right: 10px;
+                        @extend .modules-review-test__container_review-icon_image;
+                        width: 15px;
+                        height: 15px;
+                        @media (min-width:1024px) and (max-width:1199px) {
+                            margin-right: 15px;
+                    }
+                }
+                }
+                
+                &__popover {
+                    .btn-orange {
+                        margin-left: 30px;
+                        cursor: pointer;
+                        pointer-events: auto;
+                    }
+                    p {
+                    font-size: 16px !important;
+                    color: themed('learner_module_overlay_p');
+                    padding: 15px 30px 5px;
+                    }
+                    &.arrow_box {
+                        position: absolute;
+                        background: themed('white_color');
+                        width: 360px;
+                        min-height: 155px;
+                        top: 155px;
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                        border-radius: 5px;
+                        &:after {
+                            bottom: 100%;
+                            left: 50%;
+                            border: solid transparent;
+                            content: " ";
+                            height: 0;
+                            width: 0;
+                            position: absolute;
+                            pointer-events: none;
+                            border-color: rgba(136, 183, 213, 0);
+                            border-bottom-color:themed('white_color');
+                            border-width: 17px;
+                            margin-left: -20px;
+                        }
+                    }
+                }
+            }
+            
+            ul.modules-review-test__container_review-list {
+                display: flex;
+                align-items: center;
+                margin-left: 0px;
+                padding: 0px;
+                li {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 30px;
+                    font-weight: 600;
+                    color: themed($color_8);
+                }
+            }
+            
+            .overlay {
+                position: fixed;
+                z-index: 9999;
+                background: themed('learner_module_overlay_color');
+                width: 100%;
+                height: 100vh;
+                left: 0px;
+                right: 0px;
+                top: 0px;
+                bottom: 0px;
+            }
+            
+        }        
+    }
+}
+
+.full-screen-loader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: 240px;
+    align-self: center;
+    margin: auto;
+}

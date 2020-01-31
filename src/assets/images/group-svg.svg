@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="128" viewBox="0 0 120 128">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#007FA3" d="M115.392 124.59c-10.807-7.886-12.247-19.358-4.323-34.415 11.887-22.585 12.968-44.094-3.241-66.68C91.618.91 52.714-9.845 24.618 11.665 9.325 23.374.92 42.302.048 61.278c-.638 13.927 5.097 27.331 13.688 38.24 28.59 36.303 73.509 29.1 101.656 25.074"/>
+        <text fill="#FFF" font-family="OpenSans-BoldItalic, Open Sans" font-size="18" font-style="italic" font-weight="bold">
+            <tspan x="23" y="58">Welcome </tspan> <tspan x="23" y="82">back!</tspan>
+        </text>
+    </g>
+</svg>

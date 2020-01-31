@@ -1,0 +1,111 @@
+@import "../../assets/styles/mixins";
+.custom-checkbox{
+  @include themify($themes) {
+    .toggle-label {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 20px;
+        margin-top: 0;
+        margin: 0;
+        margin-right: 28px;
+        input[type=checkbox] {
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            &+.back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transition: background 150ms linear;
+                border-radius: 10px;
+                background-color: themed('checkbox_toggle_off_color');
+                & .toggle {
+                    display: block;
+                    position: absolute;
+                    content: '';
+                    background: themed('white_color');
+                    width: 50%;
+                    height: 100%;
+                    transition: margin 150ms linear;
+                    border: solid 1px themed('checkbox_toggle_off_border_color');
+                    border-radius: 10px;
+                }
+                &.label.off {
+                    color: themed('white_color');
+                }
+            }
+            &:checked+.back {
+                opacity: 0.2;
+                border-radius: 10px;
+                background-color: themed('orange_color');
+                & .toggle {
+                    margin-left: 20px;
+                }
+                &.label.on {
+                    color: themed('white_color');
+                }
+                &.label.off {
+                    color: themed('checkbox_label_disabled_color_before');
+                }
+            }
+        }
+        .label {
+            display: block;
+            position: absolute;
+            width: 50%;
+            color: themed('checkbox_label_disabled_color_before');
+            line-height: 80px;
+            text-align: center;
+            font-size: 2em;
+            &.on {
+                left: 0px;
+            }
+            &.off {
+                right: 0px;
+            }
+        }
+    }
+    .backOn {
+        opacity: 0.8 !important;
+    }
+    span.backOn.back .toggle {
+        border: solid 1px themed('orange_color') !important;
+    }
+    label {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        padding-left: 30px;
+        margin-right: 10px;
+        line-height: 1.29;
+        &:before {  
+            content: "";
+            width: 18px;
+            height: 18px;
+            position: absolute;  
+            left: 0;
+            background: url(../../assets/images/manage-accounts/manage-accounts-add-course-unchecked-gray.png)left center no-repeat;
+            margin-top: 0px;
+        }
+        &.toggle-label:before {
+            display: none;
+        }
+    }
+    input[type=checkbox] {  
+        display: none;
+        &:checked + label:before {  
+        background: url(../../assets/images/manage-accounts/manage-accounts-add-course-checked-selected.svg)left center no-repeat;
+        }
+        &:disabled + label:before {  
+            background: url(../../assets/images/manage-accounts/manage-accounts-add-course-disable-selected.svg)left center no-repeat;
+        }
+    }
+    .disabledlevels + label:before{
+        border-radius: 2px !important;
+        border: solid 1px themed('checkbox_disabled_border_color') !important;
+        background: themed('checkbox_disabled_bc_color') !important;
+        }
+    }
+}

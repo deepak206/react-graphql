@@ -1,0 +1,35 @@
+@import "../../assets/styles/mixins";
+
+$color_3: 'quiz_number';
+$color_4: 'white_color';
+$color_5: 'learner_module_head_background';
+$color_6: 'learner_module_tile_section_background';
+
+.test-container {
+    height: 100%;
+    overflow: hidden;
+    @include themify($themes) {
+        &__test-area {
+            border-radius: 8px;
+            color: themed('test-report-tile-box-p');
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+            iframe{
+                border: none;
+                overflow: hidden;
+                height: 100%;
+                width: 100%;
+                margin: 10px 40px 0px 10px;
+            }
+        }
+        &__zoom {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            cursor: pointer;
+            height: 70px;
+            width: 70px;        
+        }
+    }
+} 

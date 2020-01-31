@@ -1,0 +1,148 @@
+@import "../../assets/styles/mixins.scss";
+
+.create-account {
+    @include themify($themes) {
+        background: url(../../assets/images/create-account-background-path.png);
+        background-repeat: no-repeat;
+        z-index: 0;
+        position: relative;
+        width: 100%;
+        background-size: contain ;
+        background-position: 250px -52px;
+        background-color: themed(login_container_background_color);
+        height: 100%;
+
+        @media (min-width:1800px) {
+            // height: 896px;
+            // background-size: 100% 103%;
+            background-position: 400px -52px;
+        }
+
+        @media (min-width:1024px) and (max-width:1365px) {
+            // height: 704px;
+            // background-size: 114% 102%;
+            background-position: 100px -52px;
+        }
+
+        @include center();
+
+        &__container {
+            position: relative;
+            margin-bottom: 0px;
+            padding-top: 40px;
+
+            &__man{
+                width:100%;
+                height: 78%;
+                background: url(../../assets/images/create-account-man.png);
+                background-size: 40% auto;
+                background-position-y: 25px;
+                background-repeat: no-repeat;
+                position: absolute;
+                left: -290px;
+                top: 142px;
+            }
+            &__girl{
+                width:100%;
+                height: 44%;
+                background: url(../../assets/images/create-account-girl.png);
+                background-size: 80% auto;
+                background-position-y: 20px;
+                background-repeat: no-repeat;
+                position: absolute;
+                right: -370px;
+                top: 350px;
+            }
+            &__group-chat-reply{
+                width:70%;
+                height: 30%;
+                background: url(../../assets/images/group-chat-reply.png);
+                background-size: 30% auto;
+                background-repeat: no-repeat;
+                position: absolute;
+                right: -360px;
+                top:310px;
+            }
+            &__group-chat{
+                width:100%;
+                height: 30%;
+                background: url(../../assets/images/group-chat.png);
+                background-size: 24% auto;
+                background-repeat: no-repeat;
+                position: absolute;
+                left: -180px;
+                top: 124px;
+            }
+            
+
+            &_paper_form {
+                width: 100%;
+
+                &_submit-buttons {
+                    margin-bottom: 5px;
+                }
+            }
+
+            // @media (min-width:1800px) {
+            //     padding-top: 70px;
+            //     margin-left: 10px;
+            // }
+
+            // @media (min-width:1024px) and (max-width:1365px) {
+            //     padding-top: 60px;
+            //     margin-left: 10px;
+            // }
+        }
+
+        .create-account__heading {
+            text-align: center;
+            font-weight: 400;
+            font-size: 21px;
+            margin-top: 10px;
+            margin-bottom: 0;
+            color: themed('black_color');
+
+            // @media (min-width:1800px) {
+            //     margin-left: 45px;
+            // }
+        }
+
+        .create-account__container_paper {
+            @include commonFlex(flex, themed('white_color'), center, center, unset);
+            width: 371px;
+            height: 476px;
+            margin: 0 auto;
+            padding: 30px 30px 25px 30px;
+            border-radius: 15px;
+            font-size: 14px;
+            margin: 20px auto;
+            position: relative;
+            box-shadow: unset;
+
+            // @media (min-width:1800px) {
+            //     width: 371px;
+            //     height: 516px;
+            //     // margin-left: 45px;
+            // }
+
+            // @media (min-width:1024px) and (max-width:1365px) {
+            //     width: 371px;
+            //     height: 466px;
+            // }
+        }
+
+        .create-submit {
+            margin-top: 15px !important;
+        }
+
+        .create-account-leaf__image {
+            position: absolute;
+            z-index: -1;
+            left: -70px;
+            bottom: 15px;
+            width: 120px;
+            height: 99px;
+            object-fit: contain;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+@import "../../assets/styles/mixins";
+
+.level-drawer {
+    @include themify($themes) {
+        width: 100%;
+        height: 80px;
+        background-color: themed('level-drawer');
+        z-index: 1;
+        position: absolute;
+        transform: translateY(0px);
+        transition: .5s all ease;
+        &__container {
+            color: themed('white_color');
+            display: flex;
+            align-items: center;
+            padding: 6px 15px;
+            &_level-text {
+                margin: 0 35px 0 25px;
+                font-size: 16px;
+                @include DynamicFontConfig(normal, normal, normal, normal, normal);
+                color: themed('white_color');
+            }
+            &_list {
+                display: flex;
+                list-style: none;
+                padding-left: 0;
+                width: 100%;
+                &_item {
+                    margin: 0 20px;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50px;
+                    font-size: 16px;
+                    line-height: 40px;
+                    text-align: center;
+                    &-default {
+                        background: themed('level-drawer-visited') ;
+                        color: themed('level-drawer');
+                        cursor: pointer;
+                    }
+                    &-active {
+                        background: themed('orange_color') ;
+                        color: themed('white_color');
+                        cursor: pointer;
+                    }
+                    &-disabled {
+                        background: themed('level-drawer-disabled') ;
+                        color: themed('white_color');
+                    }
+                }
+            }
+        }        
+        &__arrow-icon-active {
+            position: absolute;
+            right: 30px;
+            cursor: pointer;
+            transition: 0.5s all ease; 
+        }
+        &__arrow-icon-hide {
+            position: absolute;
+            right: 30px;
+            cursor: pointer; 
+            transition: 0.5s all ease;
+            margin-top: -10px;
+        }             
+        &-hide {
+            transform: translateY(-84px);
+            transition: .5s all ease;
+        }
+    }
+
+}

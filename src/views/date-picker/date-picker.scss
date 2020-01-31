@@ -1,0 +1,110 @@
+@import "../../assets/styles/mixins";
+.day-picker {
+  @include themify($themes) {
+    .DayPicker-wrapper {
+      border: solid 1px themed("day_picker_month_border");
+    } 
+    &__input {
+      width:93.5%;
+      box-sizing: unset;
+      background: themed('input_focus');
+      border: 1px solid themed('input_focus');
+      border-radius: 5px;
+      margin: 5px 0 5px;
+      padding: 0 10px 0 10px;
+      height: 43px;
+      font-size: 14px;
+      &:focus {
+        background: themed('input_focus');
+        border: 1px solid themed('input_field__focus_border');
+        outline: 0;
+      }
+      &--error {
+        border: 1px solid themed('error_color') !important;
+      }
+    }  
+   
+    .DayPicker {
+      font-size: 14px;
+      width: 100%;      
+    }
+    .DayPicker-Day {
+      font-size: 14.4px;
+      padding: 11px !important;
+    }
+    .DayPicker-Months {
+      width: 100% !important;
+      padding: 8px 0;
+      margin-top: 8px;
+    }   
+    .DayPicker-Day--selected {
+      @include DynamicFontConfig(600, normal, normal,  1.29, normal);
+      background: themed("day_picker_today_bg") !important;
+      font-size: 14px;      
+      text-align: center;
+      color: themed("white_color") !important;
+      width: 24px;
+      height: 24px;
+    }
+    .day-picker__calender {
+      position: relative;
+      .error-title {
+        position: relative;
+        bottom: 0px;
+      }
+      .day-picker__icon-calendar {
+        position: relative;
+        .calendar_icon{
+          right: 10px;
+          bottom: 17px;
+          width: 18px;
+          height: 18px;
+          position: absolute;
+        }
+      }  
+    }   
+    .DayPicker-NavButton--prev {
+      background: url(../../assets/images/icon-right-arrow.svg) no-repeat !important;
+      background-size: 50% !important;
+      background-position: 0px !important;
+    }
+    .DayPicker-NavButton--next {
+      background: url(../../assets/images/icon-left-arrow.svg) no-repeat !important;
+      background-size: 50% !important;
+      background-position: center !important;
+    }
+
+    .DayPicker-Caption {
+      &__Year {
+        min-width: 60%;
+        max-width: 60%;
+        margin-right: 50px;
+        border: 0px;
+        background: none;
+        font-size: 18.5px;
+        color: themed("date-picker-label");
+        font-weight: normal;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: url(../../assets/images/down-arrow.svg) no-repeat 50px
+          24px;
+        background-size: 30px;
+      }
+      &__year-selector {
+        display: flex;
+        margin-top: -35px;
+        width: 80%;
+        justify-content: flex-start;
+        margin-right: 10px;       
+      }
+      &__month-name{
+        font-size: 18.5px;
+        color: themed("date-picker-label");
+        font-weight: normal;
+        width: 170px;
+        margin-right: 10px;
+      }
+    }
+  }
+}

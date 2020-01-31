@@ -1,0 +1,102 @@
+@import "../../assets/styles/mixins";
+
+.license-list {
+  @include themify($themes) {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 0 30px 0 30px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 10px 0 themed("expansion_panel_shadow");
+    border-radius: 5px;
+    &__summary {
+      padding: 0px 4px 0px 0px !important;
+    }
+    &__heading {
+      padding: 7px 0 7px 0;
+      font-size: 16px;
+      @include DynamicFontConfig(normal, normal, normal, normal, normal);
+      color: themed("heading_color");
+    }
+    &__expansion-detail {
+      padding: 0px 0px 15px 0px !important;
+      flex-direction: column;
+    }
+    &__edit-link {
+      cursor: pointer;
+      color: themed("list_section_edit_button");
+      font-size: 14px;
+      font-weight: 600;
+    }
+    &__close {
+      width: 20px;
+      height: 20px;
+      box-shadow: 0 0 8px 0 #e5e7ee;
+      background-color: themed("white_color");
+      position: absolute;
+      right: -8px;
+      top: -10px;
+      border-radius: 30px;
+      cursor: pointer;
+      &__remove-icon {
+        width: 40px;
+        position: relative;
+        bottom: 9px;
+        right: 8px;
+      }
+    }
+    &__list-section {
+      position: relative;
+      width: 100%;
+      display: flex;
+      background-color: themed("list-section_bg");
+      flex-direction: column;
+      border-radius: 5px;
+      tr {
+        align-items: center;
+        padding-top: 0;
+        margin-top: 0;
+        margin-bottom: 0px;
+        width: auto;
+        font-size: 12px;
+        td {
+          padding: 5px 0 16px 0;
+          .label-name {
+            color: themed("list_section_label_color");
+            font-size: 12px;
+          }
+        }
+        th {
+          padding: 16px 40px 2px 0;
+          white-space: nowrap;
+          label {
+            color: themed("list_section_header_color");
+            font-weight: normal;
+            margin-bottom: 4px;
+            font-size: 12px;
+          }
+          &:last-child {
+            padding: 22px 10px;
+          }
+          &:first-child {
+            min-width: 44px;
+            text-align: center;
+            border-right: 2px solid themed("list_section_divider");
+            padding: 22px 0px;
+            white-space: normal;
+            label {
+              font-size: 16px;
+            }
+          }
+          &:after {
+            content: none;
+          }
+        }
+        td,
+        th {
+          padding-left: 12px;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

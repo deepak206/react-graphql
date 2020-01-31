@@ -1,0 +1,129 @@
+@import "../../assets/styles/mixins";
+.test-instructions {
+    @include themify($themes) {
+        background: themed('test-instruction-background');
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100%;
+        flex-wrap: wrap;
+        hr {
+            background: none;
+            width: 100%;
+            border: themed('test-instruction-hr-border') 1px solid;
+        }        
+        &__review-test {            
+            &_skill-tested {                
+                &_box-reading {
+                    background: themed('test-instruction-skill-box-box-reading');
+                }                    
+                &_box-listening {
+                    background: themed('test-instruction-skill-box-box-listening');
+                }                    
+                &_box-grammar {
+                    background: themed('test-instruction-skill-box-box-grammar');
+                }                    
+                &_box-vocabulary {
+                    background: themed('test-instruction-skill-box-box-vocabulary');
+                }
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h4 {
+                    margin-bottom: 18px;
+                    font-size: 16px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    text-align: center;
+                    color: themed('black_color');
+                }
+                &_skill-box-section {
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding-bottom: 10px;
+                    justify-content: center;
+                    width: 580px;
+                    &_skill-box {
+                        min-width: 270px;
+                        margin: 0 10px 20px 10px;
+                        border-radius: 5px;
+                        min-height: 80px;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 20px;
+                        font-weight: 600;
+                        img {
+                            margin-right: 15px;
+                        }
+                        p{
+                            font-size: 16px !important;;
+                            font-weight: 600;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: normal;
+                            letter-spacing: normal;
+                            color: themed('test-instruction-skill-box-p');
+                        }
+                    }
+                } 
+            }
+            box-shadow: 0 2px 10px 0 themed('shadow_color');
+            background: themed('white_color');
+            border-radius: 8px;
+            width: 88%;
+            margin: 30px 30px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+            color:themed('test-instruction-review-test');
+            &_review-lm {
+                flex: 1;
+                text-align: center;
+                h3 {
+                    font-size: 21px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    text-align: center;
+                    color: themed('black_color');
+                }
+            }
+            &_lm-list {
+                display: flex;
+                align-items: center;
+                margin: 0px;
+                padding-left: 0px;
+                margin-bottom: 18px;
+                li {
+                    margin: 0 25px 0px 0px;
+                    display: flex;
+                    img {
+                        margin-right: 15px;
+                    }
+                }
+                p {
+                    font-size: 16px !important;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: themed('black_color');
+                }
+            }
+        }      
+        &__lm {
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            font-size: 16px;
+            color: themed('black_color');
+        }
+    }
+}

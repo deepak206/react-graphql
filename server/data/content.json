@@ -1,0 +1,129 @@
+{
+  "name": {
+    "en": "Sample OAEP Course1 ToC"
+  },
+  "description": {
+    "en": "no description"
+  },
+  "seed": {
+    "id": "seed101",
+    "type": "custom"
+  },
+  "createdBy": "Manik",
+  "nodes": [
+    {
+      "name": {
+        "en": "Level 4"
+      },
+      "description": {
+        "en": "Access these theme-based modules in a sequential manner"
+      },
+      "type": "container",
+      "label": "level",
+      "metadata": {
+        "gseLevel": {
+          "value": "level4",
+          "rangeLow": 36,
+          "rangeHigh": 42
+        }
+      },
+      "nodes": [
+        {
+          "name": {
+            "en": "Discussion on how to write a CV"
+          },
+          "description": {
+            "en": "This module revolves around Bharat, who is applying for a job and seeks support from his friend Anjali to improve his CV."
+          },
+          "type": "container",
+          "label": "module",
+          "metadata": {
+            "moduleType": "regular",
+            "thumbnailUrl": "http://www.iifac.org/wp-content/uploads/2018/01/library-meeting-roles-200x200.png"
+          },
+          "nodes": [
+            {
+              "name": {
+                "en": "Some display name"
+              },
+              "description": {
+                "en": "Some description"
+              },
+              "type": "asset",
+              "label": "task",
+              "assetType": "scorm",
+              "assetId": "$ars.assetId",
+              "metadata": {
+                "objectives": [
+                  {
+                    "statement": "Can understand short and simple narrative texts",
+                    "skill": "reading"
+                  }
+                ],
+                "duration": 100,
+                "questionCount": 5
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Level 5"
+      },
+      "description": {
+        "en": "Access these theme-based modules in a sequential manner"
+      },
+      "type": "container",
+      "label": "level",
+      "metadata": {
+        "gseLevel": {
+          "value": "level5",
+          "rangeLow": 43,
+          "rangeHigh": 53
+        }
+      },
+      "nodes": [
+        {
+          "name": {
+            "en": "Discussion on how to write a CV"
+          },
+          "description": {
+            "en": "This module revolves around Bharat, who is applying for a job and seeks support from his friend Anjali to improve his CV."
+          },
+          "type": "container",
+          "label": "module",
+          "metadata": {
+            "moduleType": "regular",
+            "thumbnailUrl": "http://www.iifac.org/wp-content/uploads/2018/01/library-meeting-roles-200x200.png"
+          },
+          "nodes": [
+            {
+              "name": {
+                "en": "Some display name"
+              },
+              "description": {
+                "en": "Some description"
+              },
+              "type": "asset",
+              "label": "task",
+              "assetType": "scorm",
+              "assetId": "$ars.assetId",
+              "metadata": {
+                "objectives": [
+                  {
+                    "statement": "Can understand short and simple narrative texts",
+                    "skill": "reading"
+                  }
+                ],
+                "duration": 100,
+                "questionCount": 5
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

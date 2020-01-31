@@ -1,0 +1,41 @@
+@import "../../assets/styles/mixins";
+
+.metrics-container {
+  @include themify($themes) {
+    width: 26.5%;
+    min-width: 303px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: themed('white_color');
+    margin: 15px;
+    display: flex;
+    &__header{
+        margin-left: 20px;
+        width: 70%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        &_title{
+            font-size: 28px;
+            color: themed('metric-card-title-color');
+            @include DynamicFontConfig(600, normal, normal, normal, normal);
+            &_span{
+                font-size: 21px;
+            }
+        }
+        &_sub-title{
+            font-size: 16px;
+            color: themed('metric-card-sub-title-color');
+            @include DynamicFontConfig(normal, normal, normal, normal, normal);
+        }
+    }
+    &__icon{
+        display: flex;
+        width: 30%;
+        flex-direction: row-reverse;
+        &_image {
+            width: 50px;
+            margin-right: 20px;
+        }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "../../assets/styles/mixins";
+
+.left-navigation {
+  @include themify($themes) {
+    .iconDiv {
+      min-width: unset;
+      margin-right: 15px;
+    }
+    span{
+      font-size: 14px !important;
+      font-weight: normal;
+      min-height: 36px;
+      color: themed('sub_heading_color');
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.admin-left-navigation {
+  @include themify($themes) {
+    .MuiListItem-gutters {
+      padding-left: 23px;
+    }    
+    .active {
+      background-color: themed('left_navigation_admin_active_bc_color');
+      min-height: 60px;
+      color: themed('li_active_color') !important;
+      font-weight: 600 !important;
+      span{
+          font-size: 14px !important;
+          font-weight: 600;
+          min-height: 36px !important;
+          color: themed('li_active_color') !important;
+      }
+    }
+  }
+}
+.learner-left-navigation {
+  @include themify($themes) {
+    .MuiListItem-gutters {
+      padding-left: 23px;
+      padding-right: 16px;
+    }
+    .active {
+      background-color: themed('left_navigation_active');
+      min-height: 60px;
+      color: themed('left_navigation_hover') !important;
+      font-weight: 600 !important;
+      span{
+          font-size: 14px !important;
+          font-weight: 600;
+          min-height: 36px !important;
+          color: themed('left_navigation_hover') !important;
+      }
+    }
+    .left-navigation-list-item:hover {
+      background-color: themed('left_navigation_active');
+      min-height: 60px;
+      color: themed('left_navigation_hover') !important;
+    }
+  }
+}

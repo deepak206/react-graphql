@@ -1,0 +1,63 @@
+@import "../../assets/styles/mixins";
+
+@mixin arrowPlaceStyle() {
+  z-index: 9999;
+  box-shadow: 0 1px 29px 0 #E1E4E8;
+}
+
+@mixin arrowStyle() {
+  position: absolute;
+  &::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+}
+
+.hint-poper {
+  @include themify($themes) {
+    &[x-placement^="right"] {
+      margin-left: 12px;
+      @include arrowPlaceStyle();
+      .arrow {
+        @include arrowStyle();
+        left: -9px;
+        &::before {
+          border-width: 10px 10px 10px 0;
+          border-color: transparent themed('white_color') transparent transparent;
+        }
+      }
+    }
+    &[x-placement^="left"] {
+      margin-right: 12px;
+      @include arrowPlaceStyle();
+      .arrow {
+        @include arrowStyle();
+        right: -9px;
+        &::before {
+          border-width: 10px 0 10px 10px;
+          border-color: transparent transparent transparent themed('white_color');
+        }
+      }
+    }
+    &-content {
+      &__title {
+        font-size: 13px !important;
+        &.active {
+          color: themed('password_stronger_input');
+        }
+        &.orange {
+          color: themed('password_medium_input');
+        }
+        &.red {
+          color: themed('error_color');
+        }
+      }
+      &__text {
+        font-size: 11px;
+      }
+    }
+  }
+}

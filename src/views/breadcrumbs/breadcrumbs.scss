@@ -1,0 +1,35 @@
+@import "../../assets/styles/mixins.scss";
+
+.breadcrumb-section{    
+  margin: 0 0 5px 0 !important;
+  @include themify($themes) {
+    .seprator-operator {
+        width: 7px;
+        margin: 1px 0px 1px 0px;
+        height: 14px;
+        transform: rotate(360deg);
+        background-image: url(../../assets/images/manage-accounts/icon-bredcrumbs.svg);
+    }
+    &__breadcrum-link-text {
+        font-size: 16px;
+        @include DynamicFontConfig(normal, normal, normal, normal, normal);
+        color: themed('white_color');
+        cursor: pointer;
+        text-decoration: none !important;
+    }
+    &__arrow-icon{
+      transform: rotate(-90deg);
+      width: 10px;
+      margin-right: -3px;
+      margin-top: 3px;
+    }
+  }
+}
+
+.breadcrum-link-text{
+  text-decoration: none !important;
+  font-size: 14px;
+  @include DynamicFontConfig(normal, normal, normal, normal, normal);
+  color: white;
+  cursor: pointer;
+}

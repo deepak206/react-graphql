@@ -1,0 +1,34 @@
+@import "../../assets/styles/mixins";
+
+.simple-tabs {
+    @include themify($themes) {
+        flex-grow: 1;
+        &__container {
+            box-shadow: none !important;
+            &_tabs {
+                background-color: themed('white_color');
+                padding-left: 10px;
+                &_tab {
+                    margin: 0 24px 0;
+                    span {
+                        font-size: 16px;
+                        @include DynamicFontConfig(normal, normal, normal, normal, normal);
+                        color: themed('sub_heading_color');
+                    }
+                    &-active {
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+        &__tab-panel {
+            padding: 0px;                   
+            &_box {
+                padding: 0px;
+                background-color:  themed('white_color');
+            }
+        }
+    }
+}

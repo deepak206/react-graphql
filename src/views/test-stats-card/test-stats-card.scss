@@ -1,0 +1,162 @@
+@import "../../assets/styles/mixins.scss";
+
+.test-stats-card {
+    @include themify($themes) {
+        border-radius: 5px;
+        background-color: themed('white_color');
+        flex-grow: 1;
+        margin: 0px 55px 30px 30px;
+        &-paper {
+            margin: auto;
+            max-height: 350px;
+            box-shadow: unset !important;
+        }
+        .size {
+			@include DynamicFontConfig(normal, normal, normal, normal, normal);
+			text-align: center;
+            color: themed('sub_heading_color');	
+            margin: 0;
+			&16 {
+				@extend .size;
+				font-size: 16px;
+			}
+			&12 {
+				@extend .size;
+                font-size: 12px;
+			}
+		}
+        .text {
+            @include DynamicFontConfig(normal, normal, normal, normal, normal);
+            margin: 20px 30px;
+            flex-grow: 1;
+            font-size: 16px;
+        }
+        &-heading {
+            height: 62px;
+            display: flex;
+            &__text {
+                color: themed('sub_heading_color');
+                margin: 20px 30px;
+                @extend .text;
+            }
+            &-blue {
+                height: 62px;
+                display: flex;
+                border-radius: 5px 5px 0 0;
+                background-color: themed('test_stat_card_header');
+                .test-stats-card-heading__text {
+                    @extend .text;
+                    color: themed('white_color');
+                }    
+            }
+        }
+        &-content {
+            //padding-top: 10px;
+            border-top: solid 1px themed('input_focus');
+            &__score {                
+                width: 22%;
+                min-width: 22%; 
+                height: 288px;     
+                flex-direction: column;                
+                border-right: solid 1px themed('input_focus');
+                &_sideA, &_sideB {
+                    font-size: 12px;
+                    display: flex;
+                    align-content: center;
+                    justify-content: center;
+                    &_chart-icons {
+                        margin-right: 10px;
+                        img {
+                            width: 18px;
+                            padding-top: 2px;
+                        }
+                    }
+                    &_chart-score {
+                        strong {
+                            font-size: 16px;
+                            @include DynamicFontConfig(600, normal, normal, normal, normal);
+                            color: themed('level_text_color');
+                        }
+                    }
+                }
+                &_circle-chart {
+                    padding-top: 2px;
+                    width: 75%;
+                    margin-left: 57px;
+                }
+                &_sideA {
+                    &_chart-icons {
+                        img {
+                            width: 21px;
+                            padding-top: 2px;
+                        }
+                    }
+                }
+                &_sideB {
+                    margin-top: 22px; 
+                }
+            }
+            &__graph {
+                width: 74%;
+                min-width: 74%;
+                padding: 30px 0px 20px 40px;
+            }
+            &__graph-remediation {
+                width: 56%;
+                min-width: 56%; 
+                height: 264px;               
+                padding: 25px 20px 0px 30px;
+            }
+            &__skill-remediation {
+                width: 22%;
+                min-width: 22%; 
+                padding: 10px 40px 0px 30px;        
+                border-left: solid 1px themed('input_focus');
+                &_title {
+                    font-size: 14px;
+                    @include DynamicFontConfig(normal, normal, normal, normal, normal);
+                    color: themed('level_text_color');
+                }
+                &_content {
+                    display: flex;
+                    align-items: center;
+                    height: 53.5px;
+                    &_icon {
+                        width: 30px;
+                        height: 30px;
+                        object-fit: contain;
+                    }
+                    &_title {
+                        padding: 0 0px 0 10px;
+                        width: 72%;
+                        font-size: 14px;
+                        @include DynamicFontConfig(normal, normal, normal, normal, normal);
+                        color: themed('test-card-kill-remediation-title');
+                    }
+                    &_tick {
+                        width: 15px;
+                        height: 15px;
+                        object-fit: contain;
+                        
+                    }
+                }
+            }
+        }
+        @media (min-width: 1920px) {
+            &-content__score_circle-chart {
+                margin-left: 120px;
+            }
+        }
+        @media (min-width: 1024px) and (max-width: 1300px) {
+            &-content{
+                &__score_circle-chart {
+                    margin-left: 12px;
+                }
+                &__skill-remediation {
+                    padding: 10px 15px 0px 15px;
+                }
+            }
+            
+        }
+    }
+}

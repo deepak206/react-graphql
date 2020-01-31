@@ -1,0 +1,42 @@
+@import "../../assets/styles/mixins.scss";
+
+.remediation {
+  @include themify($themes) {
+    &-tiles {
+        background: themed('learner_module_tile_section_background');
+        padding: 40px 30px;
+        border-top-right-radius: 30px;
+        height: 100%;
+      &-container{
+        flex-grow: 1;
+        width: 78%;
+        &__item {
+          @include textPearson();
+          font-size: 16px;
+          font-weight: 600;
+          color: themed('sub_heading_color');
+          justify-content: space-between;
+          height: 100px;
+          border-radius: 5px;
+          box-shadow: 0 2px 10px 0 themed('shadow_color');
+          display: flex;
+          align-items: center;
+          padding: 20px;
+          &-icon {
+            display: flex;
+            align-items: center;
+            img {
+              width: 60px;
+              height: 60px;
+              margin-right: 20px;
+            }
+          }
+          &-done {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}

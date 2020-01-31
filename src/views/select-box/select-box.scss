@@ -1,0 +1,35 @@
+@import "../../assets/styles/mixins";
+
+.select-box {
+  @include themify($themes) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+    &__label {
+      @include DynamicFontConfig(normal, normal, normal, normal, normal);
+      color: themed('black_color');
+    }
+    &__field {
+      border: 1px solid themed('input_focus');
+      border-radius: 5px;
+      margin: 4px 0 4px;
+      padding: 12px 35px 12px 20px;
+      min-height: 19px;
+      font-size: 14px;
+      outline: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background: url(../../assets/images/down-arrow.svg) no-repeat 97% 5px themed('input_focus') !important;
+      background-size: 12px 37px !important;
+      &:focus {
+        background-color: themed('white_color');
+        border: 1px solid themed('input_field__focus_border');
+        outline: 0;
+      }
+      &--error {
+        border: 1px solid themed('error_color');
+      }
+    }
+  }
+}

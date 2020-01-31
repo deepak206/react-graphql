@@ -1,0 +1,305 @@
+@import "../../assets/styles/mixins.scss";
+
+
+.test-report-container {
+	@include themify($themes) {
+		display: flex;
+		flex-direction: column;
+		margin-top: 35px;
+		margin-left: 130px;
+		margin-bottom: 30px;
+		&__btn-center {
+			display: flex;
+			width: 78%;
+			margin-top: 16px;
+			justify-content: center;
+		}
+		&__review-quiz {
+			flex-direction: column;	
+			&_review-fl {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+				padding: 30px 40px 30px 40px;
+				height: 140px;
+				&_mlevel {
+					strong {
+					  font-size: 21px;
+					  color: themed("test-report-mlevel-strong");
+					  font-weight: 600;
+					}
+					&_name {
+					  font-size: 16px;
+					  margin-bottom: 0;
+					  color: themed("test-report-mlevel-p");
+					}					
+					&_mail {
+						font-size: 14px;
+						margin-top: 0;
+						margin-top: 0;
+						color: themed('test-report-mlevel-p');
+					}
+				}
+				&_section-score {
+					font-size: 38px;
+					color: themed("test-report-p-text-blue");
+					font-weight: 600;
+				}
+			}			
+			&_chart-section {
+				width: 100%;
+				height: 158px;
+				&_hr {
+					background: none;
+					border: none;
+					border-top: 1px solid themed("test-report-quiz-scrore-section-hr");
+					padding: 0;
+					margin: 0;
+				 }
+				&_chart {
+					padding: 30px 40px 12px;
+					display: flex;
+					justify-content: space-between;
+					&_inner-section {
+						&_sideA {
+							font-size: 12px;
+							margin-top: 0;
+							display: flex;
+							&_chart-icons {
+								margin-right: 10px;
+								img {
+								width: 18px;
+								}
+							}
+							&_chart-score {
+								&_p-16 {
+									font-size: 16px;
+									font-weight: 600;									
+									margin-bottom: 0;
+								}
+								p {
+									margin-top: 0;
+								}
+							}
+						}
+					}					
+					&_charts {
+						display: flex;
+						width: 74%;
+						margin-left: 40px;
+						margin-top: -12px;	  
+						&_circular-chart {
+							margin-left: 30px;
+							width: 25%;
+							&_p {
+							color: themed("test-report-mlevel-p");
+							font-size: 14px;
+							text-align: center;
+							margin-top: 0 !important;
+							}
+						}
+					}
+				}
+			}		   
+		}
+		&__certificate-section {
+			padding: 15px 0;
+			display: flex;
+			justify-content: space-between;
+			width:78%;
+			&_certificate {
+				width: 48%;
+				min-height: 283px;
+				border-radius: 5px;
+				box-shadow: 0 2px 10px 0 themed('review-test-area-shadow');
+				background-color: themed('white_color');
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding-top: 12px;
+				img {
+					margin-top: 27px;
+					margin-bottom: 20px;
+				}    
+			}
+			&_certificate-pearson {
+				img {
+					width: 132px;
+				}  
+			} 
+		}
+		&__certificate-review-test {
+			&_review-f2 {				
+				@extend .review-f2;
+				justify-content: inherit;				
+				&_review-text {
+					padding-left: 30px;
+					width: 80%;
+					justify-content: start;
+					flex-wrap: wrap;
+					align-items: start;
+					.size16 {
+						text-align: start !important ;
+					}
+					p {
+						padding-right: 0px;
+					}
+				}
+				&_icon-review-test {
+					img {
+						width: 50px;
+						height: 55px;
+					}
+				}
+			}
+		}
+		/* this is extended*/
+		.review-f2 {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			padding: 0px 40px 0px 40px;
+		}
+		.size {
+			@include DynamicFontConfig(normal, normal, normal, normal, normal);
+			text-align: center;
+			color: themed('sub_heading_color');	
+			&16 {
+				@extend .size;
+				font-size: 16px;
+				margin: 0;
+			}
+			&14 {
+				@extend .size;
+				font-size: 14px;
+			}
+			&12 {
+				@extend .size;
+				font-size: 12px;
+			}
+		}
+		&__review-test {
+			&_review-f2 {
+				@extend .review-f2;
+				&_review-text {
+					max-width: unset;
+					margin-left: 20px;
+					p {
+						padding-right: 74px;
+						max-width: 590px;
+						color: themed("test-report-mlevel-strong");
+					}
+					&_p {
+						font-size: 16px;
+					}					
+					&_gse {		
+						color: themed('link_color') !important;
+						font-size: 14px !important;
+						font-weight: 600 !important;
+						cursor: pointer;
+					}
+					&_qmark {
+						background-color: themed('input_field__focus_border');
+						color: themed('white_color');
+						width: 20px;
+						height: 20px;
+						border-radius: 30px;
+						display: inline-block;
+						text-align: center;
+						margin: 0 5px;
+						line-height: 20px;
+					}	
+				}
+			}
+			
+			padding: 0px;
+			margin: 15px 0;
+			min-height: 120px;
+			box-shadow: 0 2px 10px 0 themed('review-test-area-shadow');
+			background: themed('white_color');
+			border-radius: 8px;
+			width: 78%;
+			display: flex;
+			align-items: center;
+			color: themed('test-report-tile-box-p');
+			
+		}
+		&__level_test-review-test-less {
+			min-height: 80px;
+			.test-report-container__review-test_review-f2 {
+				justify-content: inherit !important;
+			}
+			.test-report-container__review-test_review-f2_review-text {
+				margin-left: 0px !important;
+			}
+			.test-report-container__review-test_review-f2_icon-review-test {
+				img {
+					width: 40px;
+					height: 42px;
+					width: 60px;
+				}
+			}
+		}
+		&__level_test-review-test-greater {
+			.test-report-container__review-test_review-f2 {
+				justify-content: inherit;
+			}
+			.test-report-container__review-test_review-f2_review-text {
+				margin-left: 0px !important;
+			}
+		}
+		&__quiz-review-test-less {
+			.test-report-container__review-test_rev-test {
+				justify-content: unset;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.col-md-6 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+}
+@media (max-width: 767px) {
+	.quiz-scrore-section .lm-heading-section:after {
+		content: none;
+	}
+	.quiz-scrore-section .tile-section {
+		justify-content: center;
+		align-items: center;
+	}
+	.quiz-scrore-section .review-test {
+		flex-direction: column;
+	}
+	.quiz-scrore-section .review-fl {
+		display: flex;
+		flex-direction: column;
+	}
+	.quiz-scrore-section .review-fl .icon-review-test {
+		text-align: center;
+		margin-right: 0;
+	}
+	.quiz-scrore-section .review-text {
+		max-width: 100%;
+		text-align: center;
+	}
+	.quiz-scrore-section .review-test {
+		width: auto;
+		flex-direction: column-reverse;
+		position: relative;
+	}
+	.quiz-scrore-section .review-test .icon-lock {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+	.quiz-scrore-section .tile-section .tile-box {
+		width: 248px;
+		margin: 5px;
+	}
+}

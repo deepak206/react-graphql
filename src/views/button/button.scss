@@ -1,0 +1,115 @@
+@import "../../assets/styles/mixins";
+.btn-outlined {
+  @include themify($themes) {   
+    border-radius: 5px !important;
+    border: solid 1px themed('orange_color') !important;
+    background:  themed('orange_color') !important;
+    color: themed('white_color') !important;
+    min-width: 100px !important;
+    height: 40px;
+    line-height: 28px !important;
+    box-shadow: none !important;
+    margin-top: 0px !important;
+    span {
+      font-size: 12px;
+      font-weight: bold;
+    }
+    
+    &:hover {
+        background-color: themed('btn_outlined_hover') !important;
+        border: solid 1px themed('btn_outlined_hover') !important;
+    }
+  }
+}
+.btn-outlined-disabled {
+  @include themify($themes) {   
+    border-radius: 5px !important;
+    border: solid 1px themed('orange_color') !important;
+    background:  themed('orange_color') !important;
+    color: themed('white_color') !important;
+    min-width: 100px !important;
+    height: 40px;
+    opacity: 0.5;
+    line-height: 28px !important;
+    box-shadow: none !important;
+    margin-top: 0px !important;
+    span {
+      font-size: 12px;
+      font-weight: bold;
+    }
+    
+    &:hover {
+        background-color: themed('btn_outlined_hover') !important;
+        border: solid 1px themed('btn_outlined_hover') !important;
+    }
+  }
+}
+
+
+.btn-primary {
+  @include themify($themes) {   
+  border-radius: 5px !important;
+  border: solid 1px themed('orange_color') !important;
+  background: themed('white_color') !important;
+  color: themed('orange_color') !important;
+  min-width: 100px !important;
+  height: 40px;
+  line-height: 28px !important;
+  box-shadow: none !important;
+  margin-top: 4px !important;
+  span {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  &:hover {
+      background-color: themed('orange_color') !important;
+      color: themed('white_color') !important;
+  }
+}
+}
+.btn-cancel {
+  @include themify($themes) {   
+  background: themed('btn_cancel_background_color') !important;
+  color: themed('btn_cancel_color') !important;
+  border-radius: 2px !important;
+  border: solid 1px themed('btn_cancel_hover_color') !important;;
+  min-width: 100px !important;
+  height: 40px;
+  line-height: 28px !important;
+  box-shadow: none !important;
+  margin-top: 0px !important;
+  span {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  &:hover {
+      background-color: themed('btn_cancel_hover_color') !important;
+  }
+}
+}
+.btn-back {
+  @include themify($themes) {   
+  background: themed('btn_cancel_background_color') !important;
+  color: themed('btn_cancel_color') !important;
+  border-radius: 5px !important;
+  border: solid 1px themed('btn_cancel_hover_color') !important;;
+  min-width: 100px !important;
+  height: 40px;
+  line-height: 28px !important;
+  box-shadow: none !important;
+  margin-top: 0px !important;
+  span {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  &:hover {
+      background-color: themed('btn_cancel_hover_color') !important;
+  }
+}
+}
+.btn-lg {
+  width: 100% !important;
+}
+.MuiButton-label{
+  pointer-events: none;
+}

@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:100, 200,300, 400,600,700&display=swap");
+@import '../../brands/theming.scss';
+
+@mixin displayFlex($display, $flexdirection) {
+  display: $display;
+  flex-direction: $flexdirection;
+}
+
+@mixin center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin  DynamicFontConfig($fontweight, $fontstyle, $fontstretch, $lineheight, $letterspacing) {
+  font-weight: $fontweight;
+  font-style: $fontstyle;
+  font-stretch: $fontstretch;
+  line-height: $lineheight;
+  letter-spacing: $letterspacing;
+}
+
+@mixin textPearson() {
+  @include DynamicFontConfig(normal, normal, normal, normal, normal);
+  text-align: center;
+  color: #000000;
+}
+
+@mixin commonFlex(
+  $display,
+  $background,
+  $alignitems,
+  $flexdirection,
+  $justifycontent
+) {
+  @include displayFlex($display, $flexdirection);
+  background: $background;
+  align-items: $alignitems;
+  justify-content: $justifycontent;
+}
+
+@mixin Border($border, $borderradious) {
+  border: $border;
+  border-radius: $borderradious;
+}
+
+@mixin mancls($width, $height, $position, $right, $bottom) {
+  width: $width;
+  height: $height;
+  position: $position;
+  right: $right;
+  bottom: $bottom;
+}
+@mixin imgiconmessage($width, $position, $left, $top) {
+  width: $width;
+  position: $position;
+  left: $left;
+  top: $top;
+}
+@mixin  imgDown($width, $marginLeft, $marginTop) {
+  width: $width;
+  margin-left: $marginLeft;
+  margin-top: $marginTop;
+}
+
+
+/*
+ * Implementation of themes
+ */
+ @mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}

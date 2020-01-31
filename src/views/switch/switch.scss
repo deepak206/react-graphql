@@ -1,0 +1,70 @@
+@import "../../assets/styles/mixins";
+.switch-container {
+    @include themify($themes) {
+        &__toggle-label {
+            position: relative;
+            display: block;
+            width: 40px;
+            height: 20px;
+            cursor: pointer;
+            &_checkbox {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: none;
+                &+.switch-container__back {
+                    position: absolute;
+                    transition: background 200ms linear;
+                    background-color: themed('switch_o_color');
+                    border-radius: 15.5px;
+                    width: 140px;
+                    height: 31px;
+                    line-height: 29px;
+                    background-color: themed('switch_on_color');
+                    & .switch-container__back_toggle {
+                        display: block;
+                        position: absolute;
+                        background: themed('orange_color');
+                        width: 74px;
+                        height: 31px;
+                        transition: margin 150ms linear;
+                        border-radius: 15.5px;
+                    }
+                }
+                &:checked+.switch-container__back {
+                    background-color: themed('switch_on_color');
+                    border-radius: 15.5px;
+                    & .switch-container__back_toggle {
+                        margin-left: 65px;
+                    }
+                }
+            }
+            .switch-container__back_label {
+                display: block;
+                position: absolute;
+                width: 50%;
+                text-align: center;
+                font-size: 12px;
+                &.on {
+                    left: 0px;
+                    margin-left: 3px;
+                }
+                &.off {
+                    right: 0px;
+                    margin-right: 3px;
+                }
+            }
+        }
+        span.switch-container__back .switch-container__back_label.off, 
+        span.backOn.switch-container__back .switch-container__back_label.on {
+            color: themed('switch_off_color');
+        }
+        
+        span.switch-container__back .switch-container__back_label.on, 
+        span.backOn.switch-container__back .switch-container__back_label.off {
+            color: themed('white_color');
+        }
+    }
+}
+
+

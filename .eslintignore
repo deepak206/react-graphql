@@ -1,0 +1,4 @@
+src/**/*.test.js
+src/**/*.spec.js
+app.js
+environment.js

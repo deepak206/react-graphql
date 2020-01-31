@@ -1,0 +1,52 @@
+{
+  "assignTheme": [
+    {
+      "color": "#D9ECF1",
+      "content": "Can greet people, ask how they are and react to news",
+      "heading": "Reading",
+      "image": "reading.svg"
+    },
+    {
+      "color": "#DCF4F2",
+      "content": "Can understand basic common classroom instructions and basic questions about personal details",
+      "heading": "Listening",
+      "image": "listen.svg"
+    },
+    {
+      "color": "#F1D9EC",
+      "content": "Can give very limited personal information using basic fixed expressions",
+      "heading": "Speaking",
+      "image": "speak.svg"
+    },
+    {
+      "color": "#EDF5D9",
+      "content": "Can copy short sentences on everyday subjects (e.g. directions how to get somewhere)",
+      "heading": "Writing",
+      "image": "writing.svg"
+    },
+    {
+      "color": "#FFF5DD",
+      "content": "Can use subject personal pronouns",
+      "heading": "Grammar",
+      "image": "grammer.svg"
+    },
+    {
+      "color": "#FCEBD9",
+      "content": "Can use words like hi, liittle, buy, today and goodbye",
+      "heading": "Vocabulary",
+      "image": "vocab.svg"
+    },
+    {
+      "color": "#D9ECF1",
+      "content": "Can recognise basic plural forms of nouns.",
+      "heading": "Reading",
+      "image": "reading.svg"
+    },
+    {
+      "color": "#FFF5DD",
+      "content": "Can use the subject personal pronoun with ‘be’",
+      "heading": "Grammar",
+      "image": "grammer.svg"
+    }
+  ]
+}

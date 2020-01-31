@@ -1,0 +1,53 @@
+@import "../../assets/styles/mixins";
+
+.mobile-form {
+  @include themify($themes) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 11px;
+    &__label {
+      @include DynamicFontConfig(normal, normal, normal, normal, normal);
+      color: themed('black_color');
+    }
+    &-fields {
+      border: 1px solid themed("input_focus");
+      border-radius: 4px;
+      display: flex;
+      margin: 4px 0;
+      &.focused {
+        background: themed('input_focus');
+        border: 1px solid themed('input_field__focus_border');
+      }
+      &--error {
+        border: 1px solid themed('error_color') !important;
+      }
+      &__input {
+        background: themed('input_focus');
+        border: none;
+        width: 100%;
+        height:43px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 10px 10px;
+        &:focus {
+          outline: 0;
+        }
+      }
+      &__select {
+        background: themed("input_focus");
+        font-size: 14px;
+        padding: 0 7px;
+        border-right: 1px solid themed("bbb");
+        border-bottom-left-radius: 4px;
+        border-top-left-radius: 4px;
+      }
+      &-material__select {
+        padding-right: 24px;
+        padding-left: 7px;
+        background-color: unset !important;
+      }
+    }
+  }
+}

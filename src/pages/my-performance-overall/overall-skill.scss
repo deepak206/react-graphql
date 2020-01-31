@@ -1,0 +1,107 @@
+@import "../../assets/styles/mixins";
+
+.overall-skill {
+  @include themify($themes) {
+    border-radius: 5px;
+    background-color: themed('white_color');
+    flex-grow: 1;
+    margin: 30px 55px 0 30px;
+    &-paper {
+      margin: auto;
+      max-height: 350px;
+      box-shadow: unset !important;
+    }
+    &-heading {
+      display: flex;
+      &__text {
+        @include DynamicFontConfig(normal, normal, normal, normal, normal);
+        margin: 16px 30px;
+        flex-grow: 1;
+        font-size: 16px;
+        color: themed('sub_heading_color');
+      }
+      .select-box {
+        margin: 0 20px 0 0;
+        justify-content: center;
+        position: relative;
+        &__field {
+          @include DynamicFontConfig(normal, normal, normal, normal, normal);
+          font-size: 12px;
+          color: themed('sub_heading_color');
+          min-width: 160px;
+          margin: unset;
+          background-size: 14px 33px !important;
+          background-position-x: 133px !important;
+          &:focus {
+            border: 1px solid themed('input_focus');
+          }
+        }
+        &:after {
+          border-left: 2px solid themed('li-border-right-color');
+          content: "\00a0";
+          position: absolute;
+          top: 6px;
+          right: 35px;
+          display: block;
+          height: 42px;
+        }
+      }
+    }
+    &-content {
+      padding: 0px 8px !important;
+      border-top: solid 1px themed('input_focus');
+      &__graph {
+        padding: 0px 20px 20px 30px;
+        height: 280px;
+        border-right: solid 1px themed('input_focus');
+      }
+      &__module {
+        @include center();
+        flex-direction: column;
+        position: relative;
+        &-pendingimg {
+          height: 90px;
+          width: 90px;
+        }
+        &-progressimg {
+          height: 117px;
+          width: 143px;
+        }
+        &-completedimg {
+          height: 114px;
+          width: 105px;
+        }
+        &-description {
+          @include DynamicFontConfig(normal, normal, normal, normal, normal);
+          width: 200px;
+          margin-top: 20px; 
+          font-size: 16px;
+          text-align: center;
+          color: themed('sub_heading_color');
+          &:after {
+            left: -10px;
+            height: 20px;
+            width: 20px;
+            top: 125px;
+            border-top: 1px solid themed('input_focus');
+            border-left: 1px solid themed('input_focus');
+            transform: rotate(135deg);
+            background: themed('white_color');
+            position: absolute;
+            content: "";
+          }
+        }
+        &-action {
+          @include DynamicFontConfig(600, normal, normal, normal, normal);
+          margin-top: 10px; 
+          font-size: 16px;
+          text-align: center;
+          color: themed('link_color');
+          .download-certificate {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

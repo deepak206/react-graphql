@@ -1,0 +1,65 @@
+[
+    {
+        "title" : "Quiz 1 Results",
+        "remediation": [
+            {
+                "image": "reading.svg",
+                "status": true,
+                "title": "Reading"
+            },
+            {
+                "image": "listen.svg",
+                "status": true,
+                "title": "Listening"
+            },
+            {
+                "image": "grammer.svg",
+                "status": true,
+                "title": "Grammar"
+            },
+            {
+                "image": "vocab.svg",
+                "status": true,
+                "title": "Vocabulary"
+            }
+        ],
+        "result" : {
+            "score" : 50,
+            "total_answers": 10,
+            "total_questions" : 16,
+            "avg_time": 7 
+        }, 
+        "graph": [[ "Reading", "Listening", "Vocabulary", "Grammar" ], [ 50, 30, 90, 40 ]]
+    },
+    {
+        "title" : "Review Test Results",
+        "result" : {
+            "score" : 83,
+            "total_answers": 14,
+            "total_questions" : 16,
+            "avg_time": 7 
+        },
+        "graph": [[ "", "Reading", "Listening", "Vocabulary", "Grammar", "" ],[ 0, 85, 70, 80, 90, 0 ]]
+    },
+    {
+        "title" : "Quiz 2 Results",
+        "result" : {
+            "score" : 80,
+            "total_answers": 14,
+            "total_questions" : 16,
+            "avg_time": 7 
+        },
+        "graph": [[ "", "Reading", "Listening", "Vocabulary", "Grammar", "" ],[ 0, 90, 75, 89, 70, 0 ]]
+    },
+    {
+        "title" : "Level Test Results",
+        "result" : {
+            "score" : 0,
+            "total_answers": 0,
+            "total_questions" : 16,
+            "avg_time": 0
+        },
+        "graph": [[ "",  "Reading", "Listening", "Vocabulary", "Grammar", "" ],[ 0, 0, 0, 0, 0, 0 ]]
+    }
+]
+

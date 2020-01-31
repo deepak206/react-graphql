@@ -1,0 +1,75 @@
+@import "../../assets/styles/mixins";
+
+.edit-license {
+  min-width: 770px;
+  margin-top: 40px;
+  @include center();
+  * {
+    box-sizing: unset;
+  }
+  @include themify($themes) {
+    flex-direction: column;
+    &__breadcrumb-section {
+      &__title {
+        @include DynamicFontConfig(normal, normal, normal, normal, normal);
+        margin-bottom: 0;
+        font-size: 21px;
+        margin-top: 0;
+        display: flex;
+        align-items: center;       
+      }
+      &__side-arrow {
+        width: 35px;
+        margin-right: 15px;
+        height: 22px;
+        object-fit: contain;
+        cursor: pointer;
+      }
+      width: 100%;
+      background: themed("white_color");
+      padding: 36px 30px 25px;
+    }
+    &__papper {
+      background-color: themed("license_paper_bg");
+      box-shadow: 0 2px 10px 0 themed("license_form_area_shadow");
+      padding-bottom: 14px;
+      &__heading {
+        font-size: 21px;
+        font-weight: 400;
+        margin-bottom: 6px;
+        color: themed("heading_color");
+        padding: 35px 0 20px 40px;
+      }
+    }
+    &__form-row {
+      padding: 5px 10px 4px 40px;
+      &__input {
+        padding: 1px 30px 0 0;
+      }
+    }
+    &__end-date {
+      position: relative;
+      .error-title {
+        position: absolute;
+        left: 8px;
+        bottom: -5px;
+      }
+    }
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+    &__btns {
+      float: right;
+      text-align: right;
+      margin: 44px 0 20px 0;
+      .btn-back {
+        margin-right: 20px;
+      }
+    }
+  }
+}

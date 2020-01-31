@@ -1,0 +1,153 @@
+@import "../../assets/styles/mixins";
+
+$color_3: 'quiz_number';
+$color_4: 'white_color';
+$color_5: 'learner_module_head_background';
+$color_6: 'learner_module_tile_section_background';
+
+.bredcrumbs-title {
+    @include themify($themes) {
+        font-family: OpenSans;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: themed($color_4);
+        .seprator-operator {
+            width: 13px;
+            height: 11px;
+            margin: 0 5px;
+        }
+        &__desc {
+            font-family: OpenSans;
+            font-size: 21px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: themed($color_4);
+        }
+        &__main {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.learner-sub-header {
+    @include themify($themes) {        
+        h3 {
+            margin-bottom: 0;
+            font-weight: 500;            
+            margin-top: 0;
+            font-size: 21px;
+            @include DynamicFontConfig(normal, normal, normal, normal, normal);
+            color:themed($color_4);
+            padding-left: 17px;
+        }
+        padding: 40px 32px 30px 30px;
+        background: themed($color_5);
+        position: relative;
+        display: flex;
+        &.my-performance-header-background {
+            background: themed($color_4);
+            padding: 40px 32px 13px 15px;
+            .my-performance-header-background__heading {
+                margin-bottom: 0;           
+                margin-top: 0;
+                font-size: 21px;
+                @include DynamicFontConfig(normal, normal, normal, normal, normal);
+                color: themed('sub_heading_color');
+                padding-left: 17px;
+            }
+        }
+        p {
+            margin-top: 6px;
+            color: themed($color_4);
+            margin-bottom: 0;
+            img {
+                cursor: pointer;
+            }
+        }
+        &.quiz-header-background {            
+            z-index: 1;                
+            &:after {
+                background: url(../../assets/images/learner/learner-module/quiz-header-background.svg) no-repeat;
+                right: 80px;
+                bottom: 0px;
+                position: absolute;
+                content: '';
+                width: 330px;
+                height: 152px;
+                background-blend-mode: multiply;
+            }
+        }
+        &.review_test-header-background { 
+            z-index: 1;                
+            &:after {
+                background: url(../../assets/images/learner/learner-module/test-header-background.svg) no-repeat;
+                right: 80px;
+                bottom: 0px;
+                position: absolute;
+                content: '';
+                width: 330px;
+                height: 116px;
+                background-blend-mode: multiply;
+            }
+        }
+        &.level_test-header-background {  
+            z-index: 1;               
+            &:after {
+                background: url(../../assets/images/learner/learner-module/test-header-background.svg) no-repeat;
+                right: 80px;
+                bottom: 0px;
+                position: absolute;
+                content: '';
+                width: 330px;
+                height: 116px;
+                background-blend-mode: multiply;
+            }
+				}
+        &.remediation-header-background {
+            z-index: 1; 
+            padding: 50px 32px 40px 30px;
+            h3 {
+                margin-top: 2px;
+            }           
+            &:after {
+                    background: url(../../assets/images/learner/learner-module/remediation-header.svg) no-repeat;
+                    right: 80px;
+                    bottom: 0px;
+                    position: absolute;
+                    content: '';
+                    width: 229px;
+                    height: 98px;
+                    background-blend-mode: multiply;							
+            }
+        }
+        &.module-header-background {
+            z-index: 1; 
+            p {
+                font-size: 16px;
+            }
+            padding: 40px 32px 30px 30px;
+            background: themed($color_5);
+            position: relative;
+            &:after {
+                background: url(../../assets/images/learner/learner-module/header-section-image.png) no-repeat;
+                right: 80px;
+                bottom: 0px;
+                position: absolute;
+                content: '';
+                width: 268px;
+                height: 96px;
+                background-blend-mode: multiply;
+            }
+        }
+    }
+}

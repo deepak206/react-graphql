@@ -1,0 +1,81 @@
+@import "../../assets/styles/mixins";
+.dailogbox-container {
+    @include themify($themes) { 
+        &__score-pop-up-img {
+            img {
+                width: 100%;
+            }
+        }
+        &__content-right{
+            @include center();
+            padding-bottom: 10px;
+            &_p {
+                font-size: 16px;
+                @include DynamicFontConfig(normal, normal, normal, normal, normal);
+                text-align: center;
+                color: themed('heading_color');
+            }
+        }                       
+        &__main-container-score {
+            p {
+                padding-bottom: 20px;
+            }
+        }        
+        &__main-container-welcome-dialog {
+            p {
+                padding-left: 24px;
+                padding-bottom: 30px;
+                &:before {
+                    content: "\2022";
+                    color:themed('orange_color');
+                    font-weight: 800;
+                    display: inline-block;
+                    width: 1.5em;
+                    margin-left: -1.5em;
+                }
+            }
+        }                    
+        &__link-action {
+            padding-left: 20px; 
+            .lnk-blue {
+                color: themed('link_color');
+                text-align: center;
+                font-weight: 600;
+                text-decoration: none;
+                margin-top: 10px;            
+                font-family: 'Open Sans'; 
+            }  
+        }
+        &__dialog-outer-container {
+            padding:40px 80px 40px 80px;            
+            &_dialog-box-title {
+                padding: 0px;
+                &_root {        
+                    font-family: 'Open Sans';
+                    padding: 0px 0px 30px;
+                }
+            }
+            &_dialog-box-content {  
+                padding: 0px;
+                p {
+                    font-size: 16px;
+                    @include DynamicFontConfig(normal, normal, normal, normal, normal);
+                    letter-spacing: normal;
+                    color: themed('heading_color');
+                    font-family: 'Open Sans';
+                }
+                &_main-container {
+                    font-size: 14px;
+                    @include DynamicFontConfig(normal, normal, normal, normal, normal);
+                    letter-spacing: normal;
+                    color: themed('heading_color');
+                    background: none;
+                }
+            }
+        }        
+        font-size: 21px;
+        @include DynamicFontConfig(normal, normal, normal, normal, normal);
+        letter-spacing: normal;
+        color: themed('heading_color');
+    }
+}

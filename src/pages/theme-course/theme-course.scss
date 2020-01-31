@@ -1,0 +1,170 @@
+@import "../../assets/styles/mixins";
+
+.course-theme {
+  @include themify($themes) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: themed('white_color');
+    .select-box {
+      @include DynamicFontConfig(normal, normal, normal, normal, normal);
+      width: 330px;
+      margin-bottom: unset;
+      font-size: 14px;
+      padding: unset;
+      color: themed("black_color");
+    }
+    &-action-menu {
+      ul {
+        padding-bottom: 0px !important;
+        padding-top: 0px;
+      }
+      &__item {
+        font-family: "Open Sans", sans-serif !important;
+        min-height: 40px !important;
+        font-size: 14px !important;
+        padding-bottom: 0px !important;
+        padding-top: 0px !important;
+        line-height: normal !important;
+        &:hover {
+          background-color: themed("header_li_hover");
+        }
+        &-text {
+          font-size: 14px;
+        }
+        &-icon {
+          margin-right: 15px;
+          min-width: 18px !important;
+        }
+      }
+    }      
+    &-header {
+      padding: 20px 30px 25px; 
+      &-breadcrumb {
+        @include DynamicFontConfig(normal, normal, normal, normal, normal);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 21px;
+        margin: 17px 0 13px 0;
+        color: themed("heading_color");
+        &__img {
+          width: 33.9px;
+          height: 22px;
+          margin-right: 15.9px;
+        }
+      }
+    }
+    &-content {
+      background: themed('input_focus');
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 0;
+      &-form {
+        display: flex;
+        flex-direction: column;
+        width: 770px;
+      }
+      &-action {
+        float: right;
+        width: 80%;
+        text-align: right;
+        margin-top: 30px;
+        max-width: 770px;
+      }
+    }
+
+    .form-level {
+      width: 100%;
+      &-papper {
+        box-shadow: 0 2px 10px 0 themed("addcourse_form_area_shadow");
+        &__heading {
+          @include DynamicFontConfig(normal, normal, normal, normal, normal);
+          font-size: 21px;
+          margin-bottom: 30px;
+          margin-left: 40px;
+          padding-top: 30px;
+          color: themed("heading_color");
+        }
+        &-form {
+          width: unset;
+          margin: unset;
+          padding: 0px 40px 40px;
+          &__select {
+            padding: unset !important;
+          }
+        }
+      }
+    }
+
+    .form-module {
+      width: 100%;
+      margin-top: 30px;
+      &-papper {
+        box-shadow: 0 2px 10px 0 themed("addcourse_form_area_shadow");
+        padding: 40px;
+        &-form {
+          width: unset;
+          margin: unset;
+          &__select {
+            padding: unset !important;
+          }
+        }
+        &-tasks {
+          margin-top: 30px;
+          &__label {
+            @include DynamicFontConfig(normal, normal, normal, normal, normal);
+            font-size: 14px;
+            padding-bottom: 10px !important;
+            display: block;
+            color: themed("black_color");
+          }
+          &-items {
+            &__action {
+              float: right;
+              width: 35px;
+              height: 35px;
+              display: flex;
+              justify-content: center;
+              border-radius: 50%;
+              position: relative;
+              top: -12px;
+              left: 24px;
+              cursor: pointer;
+              &:hover {
+                background-color: themed("addcourse_edit_section_color_8");
+              }
+            }
+            &__heading {
+              @include DynamicFontConfig(600, normal, normal, normal, normal);
+              font-size: 16px;
+              color: themed("heading_color");
+            }
+            &__description {
+              width: 210px;
+              height: 51px;
+              p {
+                @include DynamicFontConfig(normal, normal, normal, normal, normal);
+                font-size: 12px !important;
+                color: themed("sub_heading_color");
+              }
+            }
+            &__icon {
+              position: relative;
+              img {
+                position: absolute;
+                right: -10px;
+                bottom: -20px;
+              }
+            }
+          }
+        }
+        &__action {
+          margin-top: 30px !important;
+        }
+      }
+    }
+  }
+}

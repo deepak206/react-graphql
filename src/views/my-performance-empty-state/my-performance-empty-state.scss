@@ -1,0 +1,40 @@
+@import "../../assets/styles/mixins";
+
+.my-performance-empty-container {
+  @include themify($themes) {
+    border-radius: 5px;
+    background-color: themed('white_color');
+    margin: 0 54px 74px 30px;
+    height: 836px;
+    &__icon{
+        @include center();
+        padding-top: 215px;
+        &_image{
+            width: 250px;
+            margin-left: 30px;
+        }
+    }
+    &__title{
+        @include center();
+        font-size: 24px;
+        @include DynamicFontConfig(600, normal, normal, normal, normal);
+        color: themed('my_performance_empty_state_title_color');
+        text-align: center;
+        padding-top: 65px;
+    }
+    &__sub-title{
+        &_p{
+            @extend .my-performance-empty-container__title;
+            font-size: 21px;
+            @include DynamicFontConfig(normal, normal, normal, normal, normal);
+            padding-top: 5px;
+        }
+    }
+    &__link{
+        @include center();
+        font-size: 16px;
+        @include DynamicFontConfig(600, normal, normal, normal, normal);
+        cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,140 @@
+@import "../../assets/styles/mixins";
+
+$color_1: 'quiz_num';
+$color_2: 'quiz_p';
+$color_3: 'quiz_number';
+$color_4: 'white_color';
+$color_5: 'learner_module_head_background';
+$color_6: 'learner_module_tile_section_background';
+$color_7: 'shadow_color';
+$color_8: 'link_color';
+$color_9: 'quiz_tile_box_visited';
+$color_10: 'sub_heading_color';
+
+.quiz-card {
+    @include themify($themes) {
+        width: 270px;
+        height: 256px;
+        min-height: 232px;
+        background: themed($color_4);
+        position: relative;
+        padding: 21px 30px 0;
+        box-shadow: 0 2px 10px 0 themed($color_7);
+        border-radius: 5px;
+        margin: 14.5px;
+        align-self: stretch;
+        margin-left: 17px;
+        h1 {
+            @include DynamicFontConfig(600, normal, normal, normal, normal);
+            font-size: 38px;
+            color: themed($color_5);
+            margin-bottom: 0px;
+            padding-top: 43px;
+        }
+        &__icon-lock {
+            position: absolute;
+            top: 16px;
+            right: 18px;
+        }
+        p {
+            padding-top: 14px;
+            position: relative;
+            z-index: 1;
+            font-size: 16px;
+            max-width: 160px;
+            color: themed($color_2);
+            min-height: 59px;
+        }     
+        &.active {
+            background: themed($color_4);
+            width: 315px;
+            margin: 0;
+            padding: 30px;
+            p {
+                max-width: 79%;
+                @include DynamicFontConfig(normal, normal, normal, normal, normal);
+                color: themed($color_10);
+                &.learner-card__p-bold {
+                    font-size: 16px !important;
+                    font-weight: 600 !important;
+                    @include DynamicFontConfig(600, normal, normal, normal, normal);
+                    color: themed($color_10);
+                }
+            }
+            // .num {
+            //     bottom: 58px;
+            // }
+        }
+        &.visited {
+            background: themed($color_9);
+            box-shadow: none;
+            p {
+                font-size: 14px;
+                max-width: 210px;
+                min-height: auto;
+                @include DynamicFontConfig(normal, normal, normal, normal, normal);
+                color: themed($color_10);
+                &.quiz-card__p-bold {
+                    font-size: 16px;
+                    @include DynamicFontConfig(500, normal, normal, normal, normal);
+                    color: themed($color_10);
+                    padding-top: 0px;
+                }
+                &.quiz-card__icon-clock_time-taken {
+                    padding-top: 0px;
+                    margin-top: 0px;
+                    padding-left: 24px;
+                    font-size: 12px;
+                    position: relative;
+                    z-index: 1;
+                    font-size: 12px;
+                    color: themed($color_2);
+                    @include DynamicFontConfig(500, normal, normal, normal, normal);
+        
+                }
+                &.quiz-card__p-message {
+                    @include DynamicFontConfig(500, normal, normal, normal, normal);
+                    font-size: 14px;
+                    padding-top: 0px;
+                }
+            }  
+        }    
+        &__box-icon-img {
+            position: absolute;
+            bottom: 26px;
+            right: 28px;
+        }
+        &__icon-clock {
+            display: flex;
+            align-items: center;
+            color: themed($color_3);
+            img {
+                margin-right: 8px;
+            }
+            &_time {
+                margin-left: 10px;
+                font-weight: 600;
+                font-size: 16px;
+            }
+            &_times {
+                display: flex;                
+                &_icon-time {
+                    margin-left: 0px;
+                    font-size: 16px;
+                    @include DynamicFontConfig(600, normal, normal, normal, normal);
+                    color: themed($color_10);
+                }
+            }            
+        }
+        &__button_top {
+            margin-top: 47px;
+        }
+        &__icon-time-outer {
+            flex-direction: column;
+            align-items: flex-start !important;
+        }
+        &__button_top {
+            padding-top: 0px;
+        }
+    }
+}

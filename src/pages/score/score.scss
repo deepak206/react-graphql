@@ -1,0 +1,165 @@
+@import "../../assets/styles/mixins.scss";
+.score-container {
+    @include themify($themes) {
+        padding-bottom: 40px;
+        padding-top: 140px;
+        background-color: themed('background_color_score_screen');
+        &__btn-outer {
+            justify-content: center;
+            display: flex;
+            margin-bottom: 160px;
+        }
+        &__points-container {
+            width: 770px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px 0 themed('score_levels_color');
+            background-color: themed('white_color');
+            margin: 0px auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4px 60px 20px 40px;
+            &_points-message {
+                &_score-text {
+                    font-size: 21px !important;
+                    width: 528px;
+                }            
+                &_gse {
+                    color: themed('link_color') !important;
+                    font-size: 14px !important;
+                    font-weight: 600 !important;
+                    cursor: pointer;                    
+                    &_qmark {
+                        background-color: themed('input_field__focus_border');
+                        color: themed('white_color');
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 30px;
+                        display: inline-block;
+                        text-align: center;
+                        margin: 0 5px;
+                        line-height: 20px;
+                    }
+                }
+                width: 528px;
+                p {
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.43;
+                    letter-spacing: normal;
+                    color: themed('sub_heading_color');
+                }
+                span {
+                    font-weight: bold;
+                }
+            }
+            &_score-section {
+                &_score {
+                    font-size: 48px;
+                    font-weight: bold;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: themed('link_color');                          
+                    &_total-scroe {
+                        font-size: 21px;
+                        font-weight: 600;
+                        color: themed('score_label_color');
+                    }
+                }
+                &_test-score {
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-size: 16px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: 2px;
+                    text-align: center;
+                    color: themed('score_label_color');
+                }
+            }
+        }        
+        &__levels {
+            width: 770px;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px 0 themed('score_levels_color');
+            background-color: themed('white_color');
+            margin: 35px auto 45px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            height: 80px;
+            label {
+                margin-right: 30px;
+                font-size: 16px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: themed('score_label_color');
+            }
+            ul {
+                display: flex;
+                list-style: none;
+                padding-left: 0;
+                width: 95%;
+                justify-content: space-between;
+                margin: 0;
+                font-size: 21px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                color: themed('score_ul_color');
+                li {
+                    padding: 20px 25px;
+                    position: relative;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            .active {
+                background: themed('input_field__focus_border');
+                color: themed('white_color');
+                position: relative;
+                border-radius: 5px;
+                box-shadow: 0 2px 10px 0 themed('shadow_color');
+                min-height: 90px;
+                min-width: 82px;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+            }
+        }        
+        &__level-text {
+            text-align: center;
+            padding-bottom: 30px;
+            font-size: 21px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: themed('level_text_color');
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .score-container {
+        &__points-container {
+            margin-top: 90px;
+        }
+    }
+}

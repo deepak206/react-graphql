@@ -1,0 +1,15 @@
+@import "../../assets/styles/mixins";
+
+.flash-message {
+  @include themify($themes) {
+    @include DynamicFontConfig(normal, normal, normal, normal, normal);
+    background-color: themed('flash_message_background');
+    border-radius: 5px;
+    box-shadow: 0 2px 10px 0 themed('shadow_color');
+    color: themed('white_color');
+    font-size: 16px;
+    height: 70px;
+    padding: 6px 20px;
+    width: 470px;
+  }
+}

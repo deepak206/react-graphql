@@ -1,0 +1,106 @@
+{
+    "skills": [
+        {
+          "type": "reading",
+          "averageScore": "80",
+          "llearningObj": "5 / 10",
+          "avgTime": "12s",
+          "acuracy": "81.5",
+          "graphData": {
+            "performanceScoreModule": [50, 30, 20, 45, 37, 50, 55, 20, 70, 98],
+            "performanceModule": ["Module 1", "Module 2", "Module 3", "Module 4", "Module 5", "Module 6", "Module 7", "Module 8", "Module 9", "Module 10"],
+            "performanceScoreLevel": [1, 55, 20, 70, 90, 50, 9, 20, 45, 37],
+            "performanceLevel": ["Level 1", "Level 2", "Level 3", "Level 4", "Level 5", "Level 6", "Level 7", "Level 8", "Level 9", "Level 10"]
+          },
+          "strong":[
+            { "content": "Can understand simple technical information", "linkTo": "", "percentage": "77" },
+            { "content": "Can identify similarities and differences between two short texts", "linkTo": "", "percentage": "70" },
+            { "content": "Can understand straightforward factual texts on familiar topics & can scan short texts to locate specific information", "linkTo": "", "percentage": "85" },
+            { "content": "Can skim a short text to identify it’s main purpose", "linkTo": "", "percentage": "79" },
+            { "content": "Can skim a short text to identify it’s main purpose", "linkTo": "", "percentage": "68" }
+          ],
+          "weak":[
+            { "content": "Can understand simple technical information", "linkTo": "", "percentage": "34" },
+            { "content": "Can identify similarities and differences between two short texts", "linkTo": "", "percentage": "56" },
+            { "content": "Can understand straightforward factual texts on familiar topics & can scan short texts to locate specific information", "linkTo": "", "percentage": "58" },
+            { "content": "Can skim a short text to identify it’s main purpose", "linkTo": "", "percentage": "69" },
+            { "content": "Can skim a short text to identify it’s main purpose", "linkTo": "", "percentage": "56" }
+          ],
+          "color": "#0081A4"
+        },
+        {
+          "type": "listening",
+          "averageScore": "78",
+          "llearningObj": "4 / 10",
+          "avgTime": "1min 12s",
+          "acuracy": "74.5",
+          "graphData": {
+            "performanceScoreModule": [45, 37, 50, 50, 30, 20, 55, 30, 20, 45 ],
+            "performanceModule": ["Module 1", "Module 2", "Module 3", "Module 4", "Module 5", "Module 6", "Module 7", "Module 8", "Module 9", "Module 10"],
+            "performanceScoreLevel": [0, 0, 45, 40, 55, 20, 0, 0, 0, 0],
+            "performanceLevel": ["Level 1", "Level 2", "Level 3", "Level 4", "Level 5", "Level 6", "Level 7", "Level 8", "Level 9", "Level 10"]
+          },
+          "strong":[
+            { "content": "Can understand simple technical information", "linkTo": "", "percentage": "77" },
+            { "content": "Can identify similarities and differences between two short texts", "linkTo": "", "percentage": "70" },
+            { "content": "Can understand straightforward factual texts on familiar topics & can scan short texts to locate specific information", "linkTo": "", "percentage": "85" },
+            { "content": "Can skim a short text to identify it’s main purpose", "linkTo": "", "percentage": "79" },
+            { "content": "Can skim a short text to identify it’s main purpose", "linkTo": "", "percentage": "68" }
+          ],
+          "weak":[
+          ],
+          "color": "#00B5A9"
+        },
+        {
+          "type": "writing",
+          "averageScore": "54",
+          "llearningObj": "3 / 10",
+          "avgTime": "5min 12s",
+          "acuracy": "54.5",
+          "graphData": {
+            "performanceScoreModule": [45, 37, 50, 0, 0, 0, 0, 0, 0, 0],
+            "performanceModule": ["Module 1", "Module 2", "Module 3", "Module 4", "Module 5", "Module 6", "Module 7", "Module 8", "Module 9", "Module 10"],
+            "performanceScoreLevel": [0, 0, 30, 20, 45, 40, 0, 0],
+            "performanceLevel": ["", "", "Level 1", "Level 2", "Level 3", "Level 4", "", ""]
+          },
+          "strong":[
+          ],
+          "weak":[
+            { "content": "Can understand simple technical information", "linkTo": "", "percentage": "34" },
+            { "content": "Can identify similarities and differences between two short texts", "linkTo": "", "percentage": "56" },
+            { "content": "Can understand straightforward factual texts on familiar topics & can scan short texts to locate specific information", "linkTo": "", "percentage": "58" },
+            { "content": "Can skim a short text to identify it’s main purpose", "linkTo": "", "percentage": "69" },
+            { "content": "Can skim a short text to identify it’s main purpose", "linkTo": "", "percentage": "56" }
+          ],
+          "color": "#6BB621"
+        },
+        {
+          "type": "speaking",
+          "averageScore": "80",
+          "llearningObj": "5 / 10",
+          "avgTime": "12s",
+          "acuracy": "81.5",
+          "graphData": {
+            "performanceScoreModule": [50, 30, 20, 45, 37, 50, 55, 20, 70, 98],
+            "performanceModule": ["Module 1", "Module 2", "Module 3", "Module 4", "Module 5", "Module 6", "Module 7", "Module 8", "Module 9", "Module 10"],
+            "performanceScoreLevel": [1, 55, 20, 70, 90, 50, 9, 20, 45, 37],
+            "performanceLevel": ["Level 1", "Level 2", "Level 3", "Level 4", "Level 5", "Level 6", "Level 7", "Level 8", "Level 9", "Level 10"]
+          },
+          "strong":[
+            { "content": "Can understand simple technical information", "linkTo": "", "percentage": "77" },
+            { "content": "Can identify similarities and differences between two short texts", "linkTo": "", "percentage": "70" },
+            { "content": "Can understand straightforward factual texts on familiar topics & can scan short texts to locate specific information", "linkTo": "", "percentage": "85" },
+            { "content": "Can skim a short text to identify it’s main purpose", "linkTo": "", "percentage": "79" },
+            { "content": "Can skim a short text to identify it’s main purpose", "linkTo": "", "percentage": "68" }
+          ],
+          "weak":[
+            { "content": "Can understand simple technical information", "linkTo": "", "percentage": "34" },
+            { "content": "Can identify similarities and differences between two short texts", "linkTo": "", "percentage": "56" },
+            { "content": "Can understand straightforward factual texts on familiar topics & can scan short texts to locate specific information", "linkTo": "", "percentage": "58" },
+            { "content": "Can skim a short text to identify it’s main purpose", "linkTo": "", "percentage": "69" },
+            { "content": "Can skim a short text to identify it’s main purpose", "linkTo": "", "percentage": "56" }
+          ],
+          "color": "#B0007A"
+        }
+    ]
+}

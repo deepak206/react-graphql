@@ -1,0 +1,1462 @@
+[
+  [
+    {
+      "active": true,
+      "completeTasks": 0,
+      "imageUrl": "module_1.png",
+      "moduleId": 1,
+      "title": "Introducing self before the class",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_2.png",
+      "moduleId": 2,
+      "title": "Handling an emergency",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_3.png",
+      "moduleId": 3,
+      "title": "Mock Drills: Preparing for the World",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_4.png",
+      "moduleId": 4,
+      "title": "(Going for a holiday)",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_5.png",
+      "moduleId": 5,
+      "title": "Describing Food",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeQuiz": false,
+      "score":0,
+      "timeTaken": "00:00",
+      "type": "quiz"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "result": {
+        "correctAnswers": 0,
+        "score": 0,
+        "timeTake": "00:00",
+        "totalQuestions": 0
+      },
+      "text": "You’re halfway through! Take the review test to test your skills before unlocking the remaining modules",
+      "title": "Review Test",
+      "type": "review_test"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_6.png",
+      "moduleId": 6,
+      "title": "Visiting a Book Fair",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_7.png",
+      "moduleId": 7,
+      "title": "Learning about search engines",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_8.png",
+      "moduleId": 8,
+      "title": "Buying Food Items",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_9.png",
+      "moduleId": 9,
+      "title": "Joining a Film Society/Drama Club (Application Forms)",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_10.png",
+      "moduleId": 10,
+      "title": "Walking through a Grocery Store",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeQuiz": false,
+      "score": 0,
+      "timeTaken": 0,
+      "type": "quiz"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": false,
+      "completeTest": false,      
+      "result": {
+        "correctAnswers": 0,
+        "score": 0,
+        "timeTake": "0:00",
+        "totalQuestions": 0
+      },
+      "text": "You’ve completed all modules! One more step to the next level & earning your completion certificate",
+      "title": "Level Test",
+      "type": "level_test"
+    }
+  ],
+  [
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_1.png",
+      "moduleId": 1,
+      "title": "Going for shopping in a new city",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": true,
+      "completeTasks": 4,
+      "imageUrl": "module_2.png",
+      "moduleId": 2,
+      "title": "Meeting new people",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_3.png",
+      "moduleId": 3,
+      "title": "Game fans",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_4.png",
+      "moduleId": 4,
+      "title": "Joining a club",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_5.png",
+      "moduleId": 5,
+      "title": "Planning a trip",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeQuiz": false,
+      "score":0,
+      "timeTaken": "00:00",
+      "type": "quiz"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "result": {
+        "correctAnswers": 0,
+        "score": 0,
+        "timeTake": "00:00",
+        "totalQuestions": 0
+      },
+      "text": "You’re halfway through! Take the review test to test your skills before unlocking the remaining modules",
+      "title": "Review Test",
+      "type": "review_test"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_6.png",
+      "moduleId": 6,
+      "title": "Flying to Delhi",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_7.png",
+      "moduleId": 7,
+      "title": "Planning a conference",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_8.png",
+      "moduleId": 8,
+      "title": "Working at a cafeteria",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_9.png",
+      "moduleId": 9,
+      "title": "A travel agent",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_10.png",
+      "moduleId": 10,
+      "title": "Going to a party",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeQuiz": false,
+      "score": 0,
+      "timeTaken": 0,
+      "type": "quiz"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "result": {
+        "correctAnswers": 0,
+        "score": 0,
+        "timeTake": "0:00",
+        "totalQuestions": 0
+      },
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "text": "You’ve completed all modules! One more step to the next level & earning your completion certificate",
+      "title": "Level Test",
+      "type": "level_test"
+    }
+  ],
+  [
+    {
+      "active": true,
+      "completeTasks": 0,
+      "imageUrl": "module_1.png",
+      "moduleId": 1,
+      "title": "Discussion between Arun and his father regarding an ingredient in a recipe",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_2.png",
+      "moduleId": 2,
+      "title": "David has to make an animation storyboard, so he collaborates with an animator",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_3.png",
+      "moduleId": 3,
+      "title": "Discussion between a customer and a waiter at a restaurant",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_4.png",
+      "moduleId": 4,
+      "title": "Sumit invites Varun for a weekend trip to Araku Valley with family",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_5.png",
+      "moduleId": 5,
+      "title": "Amrita calls the organiser of a conference on inclusive education that she wants to attend.",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeQuiz": false,
+      "score":0,
+      "timeTaken": "00:00",
+      "type": "quiz"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "result": {
+        "correctAnswers": 0,
+        "score": 0,
+        "timeTake": "00:00",
+        "totalQuestions": 0
+      },
+      "text": "You’re halfway through! Take the review test to test your skills before unlocking the remaining modules",
+      "title": "Review Test",
+      "type": "review_test"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_6.png",
+      "moduleId": 6,
+      "title": "Kriti receives a new project from a client",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_7.png",
+      "moduleId": 7,
+      "title": "Students go on a professor-guided tour to University’s Language Lab",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_8.png",
+      "moduleId": 8,
+      "title": "Shreya is undergoing treatment for back pain",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_9.png",
+      "moduleId": 9,
+      "title": "Sachin’s elder brother gives him tips on applying for his first job",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_10.png",
+      "moduleId": 10,
+      "title": "Shashi gets a new fitness plan",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeQuiz": false,
+      "score": 0,
+      "timeTaken": 0,
+      "type": "quiz"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "result": {
+        "correctAnswers": 0,
+        "score": 0,
+        "timeTake": "0:00",
+        "totalQuestions": 0
+      },
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "text": "You’ve completed all modules! One more step to the next level & earning your completion certificate",
+      "title": "Level Test",
+      "type": "level_test"
+    }
+  ],
+  [
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_1.png",
+      "moduleId": 1,
+      "title": "Discussion on how to write a CV",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_2.png",
+      "moduleId": 2,
+      "title": "Planning a holiday",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_3.png",
+      "moduleId": 3,
+      "title": "Fire safety",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_4.png",
+      "moduleId": 4,
+      "title": "Preparing for a presentation",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_5.png",
+      "moduleId": 5,
+      "title": "Procurement Officer’s Job",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": true,
+      "completeQuiz": false,
+      "score": 0,
+      "timeTaken": "25:00",
+      "type": "quiz"
+    },
+    {
+      "active": true,
+      "completeTest": false,
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "result": {
+        "correctAnswers": 0,
+        "score": 0,
+        "timeTake": "25:00",
+        "totalQuestions": 0
+      },
+      "text": "You’re halfway through! Take the review test to test your skills before unlocking the remaining modules",
+      "title": "Review Test",
+      "type": "review_test"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_6.png",
+      "moduleId": 6,
+      "title": "Renting an apartment",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_7.png",
+      "moduleId": 7,
+      "title": "Responsibilities of an HR Executive",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_8.png",
+      "moduleId": 8,
+      "title": "It’s time to throw a party!",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_9.png",
+      "moduleId": 9,
+      "title": "Sales meeting",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_10.png",
+      "moduleId": 10,
+      "title": "A doctor’s visit",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeQuiz": false,
+      "score": 0,
+      "timeTaken": 0,
+      "type": "quiz"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "result": {
+        "correctAnswers": 0,
+        "score": 0,
+        "timeTake": "0:00",
+        "totalQuestions": 0
+      },
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "text": "You’ve completed all modules! One more step to the next level & earning your completion certificate",
+      "title": "Level Test",
+      "type": "level_test"
+    }
+  ],
+  [
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_1.png",
+      "moduleId": 1,
+      "title": "Home Appliances",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_2.png",
+      "moduleId": 2,
+      "title": "Road Safety and Road accidents",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_3.png",
+      "moduleId": 3,
+      "title": "Dealing with Customers",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_4.png",
+      "moduleId": 4,
+      "title": "Workplace & Professions",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_5.png",
+      "moduleId": 5,
+      "title": "Sports",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeQuiz": true,
+      "score": 60,
+      "timeTaken": "18:00",
+      "type": "quiz"
+    },
+    {
+      "active": true,
+      "completeTest": false,
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "result": {
+        "correctAnswers": 0,
+        "score": 0,
+        "timeTake": "00:00",
+        "totalQuestions": 0
+      },
+      "text": "You’re halfway through! Take the review test to test your skills before unlocking the remaining modules",
+      "title": "Review Test",
+      "type": "review_test"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_6.png",
+      "moduleId": 6,
+      "title": "Job application",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_7.png",
+      "moduleId": 7,
+      "title": "2 Common CV errors",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_8.png",
+      "moduleId": 8,
+      "title": "Presentation",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_9.png",
+      "moduleId": 9,
+      "title": "Dealing with Customers",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_10.png",
+      "moduleId": 10,
+      "title": "Working in Teams",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeQuiz": false,
+      "score": 0,
+      "timeTaken": 0,
+      "type": "quiz"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "result": {
+        "correctAnswers": 0,
+        "score": 0,
+        "timeTake": "0:00",
+        "totalQuestions": 0
+      },
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "text": "You’ve completed all modules! One more step to the next level & earning your completion certificate",
+      "title": "Level Test",
+      "type": "level_test"
+    }
+  ],
+  [
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_1.png",
+      "moduleId": 1,
+      "title": "Saving and Investing",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_2.png",
+      "moduleId": 2,
+      "title": "Effective Problem Solving in the Workplace",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_3.png",
+      "moduleId": 3,
+      "title": "The Ban on Plastics",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_4.png",
+      "moduleId": 4,
+      "title": "A Job Interview",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_5.png",
+      "moduleId": 5,
+      "title": "Buying A Washing Machine",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeQuiz": true,
+      "score":72,
+      "timeTaken": "21:00",
+      "type": "quiz"
+    },
+    {
+      "active": false,
+      "completeTest": true,
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": true,
+      "completeTest": false,
+      "result": {
+        "correctAnswers": 0,
+        "score": 0,
+        "timeTake": "00:00",
+        "totalQuestions": 0
+      },
+      "text": "You’re halfway through! Take the review test to test your skills before unlocking the remaining modules",
+      "title": "Review Test",
+      "type": "review_test"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_6.png",
+      "moduleId": 6,
+      "title": "Art Appreciation Class",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_7.png",
+      "moduleId": 7,
+      "title": "Factors affecting climate change",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_8.png",
+      "moduleId": 8,
+      "title": "Brand Management",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_9.png",
+      "moduleId": 9,
+      "title": "The Changing Role of Women in Society",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_10.png",
+      "moduleId": 10,
+      "title": "Getting your Laptop repaired",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeQuiz": false,
+      "score": 0,
+      "timeTaken": 0,
+      "type": "quiz"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "result": {
+        "correctAnswers": 0,
+        "score": 0,
+        "timeTake": "0:00",
+        "totalQuestions": 0
+      },
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "text": "You’ve completed all modules! One more step to the next level & earning your completion certificate",
+      "title": "Level Test",
+      "type": "level_test"
+    }
+  ],
+  [
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_1.png",
+      "moduleId": 1,
+      "title": "Film Censorship",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_2.png",
+      "moduleId": 2,
+      "title": "Karen’s India visit",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_3.png",
+      "moduleId": 3,
+      "title": "River Inter-Link Project",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_4.png",
+      "moduleId": 4,
+      "title": "A Job Interview",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_5.png",
+      "moduleId": 5,
+      "title": "Social media",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeQuiz": true,
+      "score":72,
+      "timeTaken": "21:00",
+      "type": "quiz"
+    },
+    {
+      "active": false,
+      "completeTest": true,
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": false,
+      "completeTest": true,
+      "result": {
+        "correctAnswers": 12,
+        "score": 87,
+        "timeTake": "19:00",
+        "totalQuestions": 16
+      },
+      "text": "You’re halfway through! Take the review test to test your skills before unlocking the remaining modules",
+      "title": "Review Test",
+      "type": "review_test"
+    },
+    {
+      "active": true,
+      "completeTasks": 0,
+      "imageUrl": "module_6.png",
+      "moduleId": 6,
+      "title": "Wholesalers on collection of outstanding amount",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_7.png",
+      "moduleId": 7,
+      "title": "Biometric attendance",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_8.png",
+      "moduleId": 8,
+      "title": "Biometric attendance",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_9.png",
+      "moduleId": 9,
+      "title": "Changing a business",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 0,
+      "imageUrl": "module_10.png",
+      "moduleId": 10,
+      "title": "Swachh Bharat Abhiyan ",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeQuiz": false,
+      "score": 0,
+      "timeTaken": 0,
+      "type": "quiz"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "result": {
+        "correctAnswers": 0,
+        "score": 0,
+        "timeTake": "0:00",
+        "totalQuestions": 0
+      },
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "text": "You’ve completed all modules! One more step to the next level & earning your completion certificate",
+      "title": "Level Test",
+      "type": "level_test"
+    }
+  ],
+  [
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_1.png",
+      "moduleId": 1,
+      "title": "Fire Safety at the Work Place",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_2.png",
+      "moduleId": 2,
+      "title": "Orientation for new employees in the workplace",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_3.png",
+      "moduleId": 3,
+      "title": "Organising a corporate party",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_4.png",
+      "moduleId": 4,
+      "title": "Workplace ethics and conference room etiquette",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_5.png",
+      "moduleId": 5,
+      "title": "Organising a photography exhibition",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeQuiz": true,
+      "score":72,
+      "timeTaken": "21:00",
+      "type": "quiz"
+    },
+    {
+      "active": false,
+      "completeTest": true,
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": false,
+      "completeTest": true,
+      "result": {
+        "correctAnswers": 12,
+        "score": 87,
+        "timeTake": "19:00",
+        "totalQuestions": 16
+      },
+      "text": "You’re halfway through! Take the review test to test your skills before unlocking the remaining modules",
+      "title": "Review Test",
+      "type": "review_test"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_6.png",
+      "moduleId": 6,
+      "title": "Establishing a co-working space",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_7.png",
+      "moduleId": 7,
+      "title": "Interacting with different kinds of people",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_8.png",
+      "moduleId": 8,
+      "title": "Travel and Lifestyle",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_9.png",
+      "moduleId": 9,
+      "title": "Addressing a Prospective Client",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_10.png",
+      "moduleId": 10,
+      "title": "Salary Negotiation",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": true,
+      "completeQuiz": false,
+      "score": 0,
+      "timeTaken": 0,
+      "type": "quiz"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "result": {
+        "correctAnswers": 0,
+        "score": 0,
+        "timeTake": "0:00",
+        "totalQuestions": 0
+      },
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "text": "You’ve completed all modules! One more step to the next level & earning your completion certificate",
+      "title": "Level Test",
+      "type": "level_test"
+    }
+  ],
+  [
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_1.png",
+      "moduleId": 1,
+      "title": "Preparing for discussion",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_2.png",
+      "moduleId": 2,
+      "title": "Oral communication and presenattion",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_3.png",
+      "moduleId": 3,
+      "title": "Writing prayers and proposals",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_4.png",
+      "moduleId": 4,
+      "title": "Work Ethics",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_5.png",
+      "moduleId": 5,
+      "title": "Going Global",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeQuiz": true,
+      "score":72,
+      "timeTaken": "21:00",
+      "type": "quiz"
+    },
+    {
+      "active": false,
+      "completeTest": true,
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": false,
+      "completeTest": true,
+      "result": {
+        "correctAnswers": 12,
+        "score": 87,
+        "timeTake": "19:00",
+        "totalQuestions": 16
+      },
+      "text": "You’re halfway through! Take the review test to test your skills before unlocking the remaining modules",
+      "title": "Review Test",
+      "type": "review_test"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_6.png",
+      "moduleId": 6,
+      "title": "Migration and social conflict",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_7.png",
+      "moduleId": 7,
+      "title": "Contitutional Law",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_8.png",
+      "moduleId": 8,
+      "title": "Business Socializing",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_9.png",
+      "moduleId": 9,
+      "title": "Strategic Brand Management",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_10.png",
+      "moduleId": 10,
+      "title": "Entrepreneurship",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeQuiz": true,
+      "score": 90,
+      "timeTaken": "25:00",
+      "type": "quiz"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": true,
+      "completeTest": false,      
+      "result": {
+        "correctAnswers": 0,
+        "score": 0,
+        "timeTake": "0:00",
+        "totalQuestions": 0
+      },
+      "text": "You’ve completed all modules! One more step to the next level & earning your completion certificate",
+      "title": "Level Test",
+      "type": "level_test"
+    }
+  ],
+  [
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_1.png",
+      "moduleId": 1,
+      "title": "MOOC",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_2.png",
+      "moduleId": 2,
+      "title": "Migration and social conflict",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_3.png",
+      "moduleId": 3,
+      "title": "School reports vs News reports",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_4.png",
+      "moduleId": 4,
+      "title": "Interview VS written Examination",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_5.png",
+      "moduleId": 5,
+      "title": "Film Reviews",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeQuiz": true,
+      "score": 72,
+      "timeTaken": "21:00",
+      "type": "quiz"
+    },
+    {
+      "active": false,
+      "completeTest": true,
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": false,
+      "completeTest": true,
+      "result": {
+        "correctAnswers": 12,
+        "score": 87,
+        "timeTake": "19:00",
+        "totalQuestions": 16
+      },
+      "text": "You’re halfway through! Take the review test to test your skills before unlocking the remaining modules",
+      "title": "Review Test",
+      "type": "review_test"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_6.png",
+      "moduleId": 6,
+      "title": "Module 6",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_7.png",
+      "moduleId": 7,
+      "title": "Learning Industry-Specific Terms (E.g. Doctors, Lawyers, Authors, Journalists)",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_8.png",
+      "moduleId": 8,
+      "title": "Discussion on Political and Social Issues",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_9.png",
+      "moduleId": 9,
+      "title": "Dialects Vs Accents",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeTasks": 8,
+      "imageUrl": "module_10.png",
+      "moduleId": 10,
+      "title": "Handling a Review Process (Team Handling as a Manager)",
+      "totalTasks": 8,
+      "type": "module"
+    },
+    {
+      "active": false,
+      "completeQuiz": true,
+      "score": 90,
+      "timeTaken": "25:00",
+      "type": "quiz"
+    },
+    {
+      "active": false,
+      "completeTest": false,
+      "text": "Improve your low-performing skills before Review test",
+      "title": "Remediation",
+      "type": "remediation"
+    },
+    {
+      "active": false,
+      "completeTest": true,      
+      "result": {
+        "correctAnswers": 12,
+        "score": 87,
+        "timeTake": "25:00",
+        "totalQuestions": 16
+      },
+      "text": "You’ve completed all modules! One more step to the next level & earning your completion certificate",
+      "title": "Level Test",
+      "type": "level_test"
+    }
+  ]
+]

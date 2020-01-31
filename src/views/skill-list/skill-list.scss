@@ -1,0 +1,71 @@
+@import "../../assets/styles/mixins";
+
+.skill-list-container {
+  @include themify($themes) {
+    min-width: 450px;
+    height: auto;
+    border-radius: 5px;
+    background-color: themed('white_color');
+    &__header{
+        width: 100%;
+        min-height: 62px;
+        font-size: 16px;
+        @include DynamicFontConfig(normal, normal, normal, normal, normal);
+        color: themed('skill-list-header-color');
+        align-items: center;
+        justify-content: left;
+        display: flex;
+        border-bottom: solid 1px themed("skill-list-border-bottom-color");
+        &_span{
+          margin-left: 30px;
+        }
+    }
+    &__performance-tile{
+        min-height: 115px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        border-bottom: solid 1px themed("skill-list-border-bottom-color");
+        width:100%;
+        &_left-icon{
+          margin-left: 30px;
+          width:10%;
+          &_chart{
+            height: 80px;
+            width: 75px;
+          }
+        }
+        &_content{
+            font-size: 16px;
+            @include DynamicFontConfig(normal, normal, normal, 1.5, normal);
+            color: themed('skill-list-header-color');
+            padding: 30px;
+            width:78%;
+            margin-left: 30px;
+        }
+        &_right-icon{
+          width: 12%;
+          cursor: pointer;
+        }
+    }
+    &_empty-text{
+      height: 115px;
+      font-size: 16px;
+      @include DynamicFontConfig(600, normal, normal, 1.5, normal);
+      color: themed('skill-list-header-color');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (min-width: 1800px) {
+      &__performance-tile_right-icon{
+        margin-right: 0px;
+      }
+    }
+    @media (min-width: 1280px) and (max-width: 1550px) {
+      &__performance-tile_right-icon{
+        margin-right: 10px;
+      }
+    }
+  }
+}

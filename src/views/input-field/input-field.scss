@@ -1,0 +1,37 @@
+@import "../../assets/styles/mixins";
+
+.input-box {
+  @include themify($themes) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    &__label {
+      @include DynamicFontConfig(normal, normal, normal, normal, normal);
+      color: themed('black_color');
+    }
+    &__field {
+      box-sizing: unset;
+      background: themed('input_focus');
+      border: 1px solid themed('input_focus');
+      border-radius: 5px;
+      margin: 5px 0 5px;
+      padding: 0 10px 0 10px;
+      height: 43px;
+      font-size: 14px;
+      
+      &:focus {
+        background: themed('input_focus');
+        border: 1px solid themed('input_field__focus_border');
+        outline: 0;
+      }
+      &--error {
+        border: 1px solid themed('error_color') !important;
+      }
+      
+    }
+    .disabled{
+      background-color: themed('disable_background_color');
+      color: themed('black_color');
+    }
+  }
+}
